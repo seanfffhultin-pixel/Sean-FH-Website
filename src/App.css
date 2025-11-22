@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #ffffff;
+  background: #fdf6f6;
   color: #111;
 }
 
@@ -16,28 +16,7 @@ a {
   text-decoration: none;
 }
 
-/* NAVBAR */
-.navbar {
-  width: 100%;
-  padding: 15px 25px;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid #eee;
-  z-index: 10;
-}
 
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  font-weight: 500;
-}
 
 /* HERO SECTION */
 .hero {
@@ -95,35 +74,112 @@ a {
   color: white;
 }
 
-/* VIDEOS */
-.videos {
-  padding: 50px 20px;
+
+/* MY STORY SECTION */
+.my-story {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
-.video-grid {
+.my-story h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.story-block {
+  margin-bottom: 40px;
+}
+
+.story-block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.story-block p {
+  line-height: 1.7;
+  color: #444;
+  font-size: 1rem;
+}
+
+
+/* Latestuploads */
+.latest-uploads-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.videos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  gap: 20px;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .video-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.video-thumb {
   width: 100%;
-  height: 160px;
-  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* GALLERY */
-.gallery {
-  padding: 50px 20px;
+.video-frame {
+  width: 100%;
+  height: 315px;
 }
 
+@media (min-width: 768px) {
+  .videos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* PODCAST SECTION */
+.podcast {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.podcast h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.podcast-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.podcast-btn {
+  padding: 12px 25px;
+  background: #1db954; /* Spotify green */
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.podcast-btn:hover {
+  background: #17a347;
+}
+
+
+/* GALLERY SECTION */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -149,15 +205,15 @@ a {
   gap: 20px;
 }
 
-.instagram-btn {
-  background: rgb(255, 0, 247);
-  color: white;
+.instagram {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
 }
 
-.tiktok-btn {
-  background: rgb(90, 0, 117);
-  color: white;
+
+.tiktok {
+  background: linear-gradient(135deg, #25f4ee, #fe2c55);
 }
+
 
 .social-btn {
   width: 65px;

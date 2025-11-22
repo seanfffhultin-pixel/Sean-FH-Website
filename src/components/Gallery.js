@@ -4,8 +4,12 @@ export default function Gallery() {
   const photos = [
     "https://i.postimg.cc/HLZkd594/IMG-3330.jpg",
     "https://i.postimg.cc/bJrfTBbx/IMG-2851.jpg",
+    "https://i.postimg.cc/GhnPRNjz/IMG-2874.jpg",
     "https://i.postimg.cc/7PCfPBcq/IMG-3347.jpg",
     "https://i.postimg.cc/Dzw6rR8W/IMG-2834.jpg",
+    "https://i.postimg.cc/2S8Z8fL4/IMG-2044.jpg",
+    "https://i.postimg.cc/0Qgjmgrx/IMG-2026.jpg",
+    "https://i.postimg.cc/QdwdGLQx/IMG-1590.jpg",
     "https://i.postimg.cc/L5L34p0g/IMG-2985.jpg",
     "https://i.postimg.cc/gkyHfGhW/IMG-0699.jpg",
     "https://i.postimg.cc/cJC7gYbH/IMG-2754.jpg",
