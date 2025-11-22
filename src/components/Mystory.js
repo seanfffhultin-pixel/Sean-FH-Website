@@ -6,7 +6,7 @@ export default function MyStory() {
       <h2>My Story</h2>
 
       <div className="story-block">
-        <h3>My Passion for Avaition</h3>
+        <h3>My Passion for Aviation</h3>
         <p>
           I've always loved aviation and traveling - in fact my father is a pilot and used to work for British Airways - and that was the starter to the fire that is my love for the metal tube that is the plane. I have been lucky enough to have flown more than I can count - even before this Youtube channel came to mind. My favourite aircraft manufacturer has always been Airbus but I respect Boeing fans. My favourite plane used to be the A380 but it has recently changed to the A350 - this is because of its elegance and sleek, beautiful design. I really love PLANES!
         </p>
