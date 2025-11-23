@@ -10,15 +10,15 @@ function App() {
   return (
     <Router>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/reviews" element={<Reviews />} />
       </Routes>
-      <Navbar />
-        <Routes> … </Routes>
     </Router>
   );
 }
 
 export default App;
+

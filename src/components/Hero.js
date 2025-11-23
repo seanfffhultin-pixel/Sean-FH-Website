@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function Hero() {
   return (
@@ -24,10 +26,10 @@ export default function Hero() {
         <p>Flight reviews, aviation stories, and travel adventures!</p>
 
         <div className="hero-buttons">
-          <a 
-            href="https://seanfh.netlify.app/about"
-            className="btn"
-          >Learn More</a>
+
+          <Link to="/about" className="btn">
+            Learn More
+          </Link>
 
           <a 
             href="https://youtube.com/@seanfhtravels"
