@@ -25,7 +25,7 @@ export default function Hero() {
 
         <div className="hero-buttons">
           <a 
-            href="/about"
+            href="https://seanfh.netlify.app/about"
             className="btn"
           >Learn More</a>
 
