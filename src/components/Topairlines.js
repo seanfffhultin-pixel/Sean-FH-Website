@@ -15,58 +15,20 @@ export default function TopAirlines() {
   const prev = () => setCurrent((current - 1 + airlines.length) % airlines.length);
 
   return (
-    <section
-      style={{
-        marginTop: "60px",
-        padding: "0 20px",
-        textAlign: "center",
-      }}
-    >
-      <h3 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>Top 5 Airlines</h3>
+    <section className="carousel-section">
+      <h3>Top 5 Airlines</h3>
 
-      <div style={{ position: "relative", maxWidth: "600px", margin: "0 auto" }}>
+      <div className="carousel-container">
         <img
           src={airlines[current].img}
           alt={airlines[current].name}
-          style={{ width: "100%", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0,0,0,0.2)" }}
+          className="carousel-img carousel-fade"
         />
-        <p style={{ marginTop: "10px", fontWeight: "500" }}>{airlines[current].name}</p>
 
-        <button
-          onClick={prev}
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "10px",
-            transform: "translateY(-50%)",
-            padding: "8px 12px",
-            borderRadius: "5px",
-            border: "none",
-            backgroundColor: "#e63946",
-            color: "#fff",
-            cursor: "pointer",
-          }}
-        >
-          ‹
-        </button>
+        <p className="carousel-title">{airlines[current].name}</p>
 
-        <button
-          onClick={next}
-          style={{
-            position: "absolute",
-            top: "50%",
-            right: "10px",
-            transform: "translateY(-50%)",
-            padding: "8px 12px",
-            borderRadius: "5px",
-            border: "none",
-            backgroundColor: "#e63946",
-            color: "#fff",
-            cursor: "pointer",
-          }}
-        >
-          ›
-        </button>
+        <button className="carousel-btn carousel-btn-left" onClick={prev}>‹</button>
+        <button className="carousel-btn carousel-btn-right" onClick={next}>›</button>
       </div>
     </section>
   );

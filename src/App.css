@@ -16,9 +16,77 @@ a {
   text-decoration: none;
 }
 
+/* ---------------------- */
+/* NAVBAR STYLING         */
+/* ---------------------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ef2121;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.25s ease;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+  color: #e63946;
+  border-bottom-color: #e63946;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-container {
+    padding: 10px 15px;
+  }
+}
 
 
+/* -------------------------------------------------- */
+/* HOME PAGE */
+/* -------------------------------------------------- */
+
+/* ---------------------- */
 /* HERO SECTION */
+/* ---------------------- */
 .hero {
   position: relative;
   width: 100%;
@@ -52,7 +120,9 @@ a {
   margin-bottom: 15px;
 }
 
+/* ---------------------- */
 /* HERO BUTTONS */
+/* ---------------------- */
 .hero-buttons {
   margin-top: 15px;
   display: flex;
@@ -75,36 +145,10 @@ a {
 }
 
 
-/* MY STORY SECTION */
-.my-story {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
 
-.my-story h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-}
-
-.story-block {
-  margin-bottom: 40px;
-}
-
-.story-block h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.story-block p {
-  line-height: 1.7;
-  color: #444;
-  font-size: 1rem;
-}
-
-
+/* ---------------------- */
 /* Latestuploads */
+/* ---------------------- */
 .latest-uploads-section {
   margin-top: 80px;
   text-align: center;
@@ -124,7 +168,9 @@ a {
   margin: auto;
 }
 
+/* ---------------------- */
 /* Compatibility: some components use `.video-grid` instead of `.videos-grid` */
+/* ---------------------- */
 .video-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -145,7 +191,9 @@ a {
   height: 315px;
 }
 
+/* ---------------------- */
 /* Ensure images inside `.video-card` display consistently */
+/* ---------------------- */
 .video-card img {
   width: 100%;
   height: 220px;
@@ -159,7 +207,9 @@ a {
   }
 }
 
+/* ---------------------- */
 /* PODCAST SECTION */
+/* ---------------------- */
 .podcast {
   padding: 60px 20px;
   text-align: center;
@@ -195,8 +245,97 @@ a {
   background: #17a347;
 }
 
+/* ---------------------- */
+/* ===== TOP CAROUSELS ===== */
+/* ---------------------- */
 
+.carousel-section {
+  margin-top: 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.carousel-section h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.carousel-img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carousel-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.30);
+}
+
+.carousel-title {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(230, 57, 70, 0.85);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(230, 57, 70, 1);
+  transform: translateY(-50%) scale(1.10);
+}
+
+.carousel-btn-left {
+  left: -5px;
+}
+
+.carousel-btn-right {
+  right: -5px;
+}
+
+
+/* ---------------------- */
+/* Smooth fade animation */
+/* ---------------------- */
+.carousel-fade {
+  animation: fadeSlide 0.5s ease forwards;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ---------------------- */
 /* GALLERY SECTION */
+/* ---------------------- */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -210,7 +349,9 @@ a {
   border-radius: 10px;
 }
 
+/* ---------------------- */
 /* SOCIALS */
+/* ---------------------- */
 .socials {
   padding: 40px 20px;
   text-align: center;
@@ -232,8 +373,9 @@ a {
 }
 
 
-
+/* ---------------------- */
 /* Button used by components: `.circle-btn` -> alias for `.social-btn` */
+/* ---------------------- */
 .social-btn,
 .circle-btn {
   width: 65px;
@@ -253,4 +395,146 @@ a {
   text-align: center;
   background: #eee;
   margin-top: 40px;
+}
+
+
+
+/* -------------------------------------------------- */
+/* ABOUT PAGE */
+/* -------------------------------------------------- */
+
+/* ---------------------- */
+/* ABOUT PAGE STYLING     */
+/* ---------------------- */
+
+.about-section {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.about-block {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.about-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-img {
+  width: 45%;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.about-text h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #8a39e6;
+}
+
+.about-text p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Mobile view */
+@media (max-width: 800px) {
+  .about-block,
+  .about-block.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+}
+
+
+
+/* -------------------------------------------------- */
+/* REVIEWS PAGE */
+/* -------------------------------------------------- */
+
+/* ---------------------- */
+/* REVIEWS PAGE STYLING     */
+/* ---------------------- */
+
+.reviews-page {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.reviews-page h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.no-reviews {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  max-width: 600px;
+  margin: auto;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.review-card {
+  padding: 20px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  border-left: 5px solid #0077ff;
+}
+
+.review-card h3 {
+  margin-bottom: 5px;
+}
+
+.review-card .flight {
+  font-weight: bold;
+  color: #0077ff;
+}
+
+.review-card .date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.review-card .rating {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.review-card .text {
+  line-height: 1.5;
+  color: #444;
 }

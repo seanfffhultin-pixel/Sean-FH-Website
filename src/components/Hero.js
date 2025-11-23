@@ -25,7 +25,7 @@ export default function Hero() {
 
         <div className="hero-buttons">
           <a 
-            href="#mystory"
+            href="/about"
             className="btn"
           >Learn More</a>
 

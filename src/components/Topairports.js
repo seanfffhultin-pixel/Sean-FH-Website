@@ -9,64 +9,26 @@ export default function TopAirports() {
     { name: "5. Oslo Airport, Oslo (OSL)", img: "https://i.postimg.cc/Jz03R3b2/IMG-3433.jpg" },
   ];
 
-  const [current, setCurrent] = useState(0);
+    const [current, setCurrent] = useState(0);
 
   const next = () => setCurrent((current + 1) % airports.length);
   const prev = () => setCurrent((current - 1 + airports.length) % airports.length);
 
   return (
-    <section
-      style={{
-        marginTop: "60px",
-        padding: "0 20px",
-        textAlign: "center",
-      }}
-    >
-      <h3 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "20px" }}>Top 5 Airports</h3>
+    <section className="carousel-section">
+      <h3>Top 5 Airports</h3>
 
-      <div style={{ position: "relative", maxWidth: "600px", margin: "0 auto" }}>
+      <div className="carousel-container">
         <img
           src={airports[current].img}
           alt={airports[current].name}
-          style={{ width: "100%", borderRadius: "10px", boxShadow: "0 4px 8px rgba(0,0,0,0.2)" }}
+          className="carousel-img carousel-fade"
         />
-        <p style={{ marginTop: "10px", fontWeight: "500" }}>{airports[current].name}</p>
 
-        <button
-          onClick={prev}
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "10px",
-            transform: "translateY(-50%)",
-            padding: "8px 12px",
-            borderRadius: "5px",
-            border: "none",
-            backgroundColor: "#e63946",
-            color: "#fff",
-            cursor: "pointer",
-          }}
-        >
-          ‹
-        </button>
+        <p className="carousel-title">{airports[current].name}</p>
 
-        <button
-          onClick={next}
-          style={{
-            position: "absolute",
-            top: "50%",
-            right: "10px",
-            transform: "translateY(-50%)",
-            padding: "8px 12px",
-            borderRadius: "5px",
-            border: "none",
-            backgroundColor: "#e63946",
-            color: "#fff",
-            cursor: "pointer",
-          }}
-        >
-          ›
-        </button>
+        <button className="carousel-btn carousel-btn-left" onClick={prev}>‹</button>
+        <button className="carousel-btn carousel-btn-right" onClick={next}>›</button>
       </div>
     </section>
   );
