@@ -10,6 +10,7 @@ import Airlines from "./components/Topairlines";
 import Featuredreview from "./components/Featuredreview";
 import MyStory from "./components/Mystory";
 import Podcast from "./components/Podcast";
+import Stats from "./components/Stats";
 export default function App() {
   return (
     <div>
@@ -18,6 +19,7 @@ export default function App() {
       <main>
         <Info />
         <MyStory />
+        <Stats />
         <Featuredreview />
         <Latestuploads/>
         <Podcast />
