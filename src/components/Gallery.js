@@ -37,12 +37,14 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="gallery">
-      <h2>Photo Gallery</h2>
+    <section className="gallery-section">
+      <h2 className="gallery-title">Photo Gallery</h2>
 
       <div className="gallery-grid">
         {photos.map((url, i) => (
-          <img key={i} src={url} alt="Travel" />
+          <div className="gallery-item" key={i}>
+            <img key={i} src={url} alt="Travel" />
+          </div>
         ))}
       </div>
     </section>

@@ -1,4 +1,6 @@
 import React from "react";
+import TopLists from "../components/Toplists";
+import Gallery from "../components/Gallery";
 
 export default function About() {
   return (
@@ -12,23 +14,22 @@ export default function About() {
           alt="Plane Window"
           className="about-img"
         />
-
         <div className="about-text">
           <h3>My Passion for Aviation</h3>
           <p>
             I've always loved aviation and traveling — in fact my father is a pilot
-            and used to work for British Airways — and that was the spark that
-            ignited my love for the metal tube that is the plane.
+            and used to work for <span className="highlight">British Airways</span> — and that
+            was the spark that ignited my love for the metal tube that is the plane.
           </p>
           <p>
             I have been lucky enough to fly more than I can count — even before
             this YouTube channel existed. My favourite aircraft manufacturer has
-            always been Airbus (but I respect Boeing fans!).
+            always been <span className="highlight">Airbus</span> (but I respect Boeing fans!).
           </p>
           <p>
-            My favourite plane used to be the A380, but it recently changed to the
-            A350 because of its elegance, quietness, and beautiful design.
-            I really love PLANES!
+            My favourite plane used to be the <span className="highlight">A380</span>, but it recently
+            changed to the <span className="highlight">A350</span> because of its elegance, quietness, 
+            and beautiful design. I really love <strong>PLANES!</strong>
           </p>
         </div>
       </div>
@@ -40,14 +41,13 @@ export default function About() {
           alt="Traveling"
           className="about-img"
         />
-
         <div className="about-text">
           <h3>My Channel – Sean FH Travels</h3>
           <p>
             The idea for this channel began once I'd graduated from primary school
             and was about to start secondary school. In the summer holidays, my family
             went on an unforgettable trip to Australia — what I called
-            <b> “Around the World in Not Long.”</b>
+            <span className="highlight"> “Around the World in Not Long.”</span>
           </p>
           <p>
             This trip kickstarted my love for travel vlogging and airline reviews.
@@ -64,7 +64,6 @@ export default function About() {
           alt="Runway"
           className="about-img"
         />
-
         <div className="about-text">
           <h3>The Future – More Subscribers?</h3>
           <p>
@@ -79,11 +78,18 @@ export default function About() {
           </p>
           <p>
             If you're reading this, you’re probably already subscribed. 
-            But if not… what are you waiting for?  
-            <b>Hit that button — it REALLY helps!</b>
+            But if not… what are you waiting for?   
+            <strong>Hit that button — it REALLY helps!</strong>
           </p>
         </div>
       </div>
+
+      {/* ✨ New Sections */}
+      <h2 className="about-title">Top Airlines & Airports</h2>
+      <TopLists />
+
+      <h2 className="about-title">Travel Photos</h2>
+      <Gallery />
     </section>
   );
 }

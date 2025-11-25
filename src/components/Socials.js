@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css"; // Ensure your styles are imported
 
 export default function Socials() {
   return (
@@ -11,6 +12,7 @@ export default function Socials() {
           target="_blank"
           rel="noreferrer"
           className="social-btn instagram"
+          title="Instagram"
         >
           <i className="fa-brands fa-instagram"></i>
         </a>
@@ -20,6 +22,7 @@ export default function Socials() {
           target="_blank"
           rel="noreferrer"
           className="social-btn tiktok"
+          title="TikTok"
         >
           <i className="fa-brands fa-tiktok"></i>
         </a>
@@ -29,6 +32,7 @@ export default function Socials() {
           target="_blank"
           rel="noreferrer"
           className="social-btn youtube"
+          title="YouTube"
         >
           <i className="fa-brands fa-youtube"></i>
         </a>

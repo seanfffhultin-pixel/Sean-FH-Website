@@ -1,7 +1,7 @@
 import React from "react";
+import "../App.css"; // We'll create this CSS file
 
 export default function LatestUploadsWithThumbnails() {
-  // Replace these with your real video IDs + titles:
   const videos = [
     {
       id: "kGnGlGt-Dco",
@@ -18,63 +18,25 @@ export default function LatestUploadsWithThumbnails() {
   ];
 
   return (
-    <section
-      id="latest"
-      style={{
-        marginTop: "80px",
-        padding: "0 20px",
-        textAlign: "center",
-      }}
-    >
-      <h3 style={{ fontSize: "24px", fontWeight: "600", marginBottom: "30px" }}>
-        Latest Uploads
-      </h3>
+    <section className="latest-uploads-section" id="latest">
+      <h3 className="section-title">Latest Uploads</h3>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "20px",
-          maxWidth: "900px",
-          margin: "auto",
-        }}
-      >
+      <div className="videos-grid">
         {videos.map((video, idx) => (
           <a
             key={idx}
             href={`https://www.youtube.com/watch?v=${video.id}`}
             target="_blank"
             rel="noreferrer"
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-            }}
+            className="video-card-link"
           >
-            <div
-              style={{
-                borderRadius: "10px",
-                overflow: "hidden",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-              }}
-            >
+            <div className="video-card">
               <img
                 src={`https://img.youtube.com/vi/${video.id}/0.jpg`}
                 alt={video.title}
-                style={{
-                  width: "100%",
-                  display: "block",
-                }}
+                className="video-frame"
               />
-              <p
-                style={{
-                  padding: "10px",
-                  fontSize: "16px",
-                  fontWeight: "500",
-                  background: "#fff",
-                }}
-              >
-                {video.title}
-              </p>
+              <p className="video-title">{video.title}</p>
             </div>
           </a>
         ))}

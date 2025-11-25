@@ -7,10 +7,9 @@ import Gallery from "../components/Gallery";
 import Socials from "../components/Socials";
 import Footer from "../components/Footer";
 import About from "../components/About";
-import Topairports from "../components/Topairports";
-import Topairlines from "../components/Topairlines";
 import Featuredreview from "../components/Featuredreview";
 import Podcast from "../components/Podcast";
+import TopLists from "../components/Toplists";
 
 export default function Home() {
   return (
@@ -20,8 +19,7 @@ export default function Home() {
       <Featuredreview />
       <Latestuploads />
       <Podcast />
-      <Topairports />
-      <Topairlines />
+      <TopLists />
       <Gallery />
       <Socials />
       <Footer />
