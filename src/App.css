@@ -28,10 +28,10 @@ html, body {
 /* ---------------------- */
 /* NAVBAR */
 /* ---------------------- */
-/* Navbar basic styles */
+
 .navbar {
   width: 100%;
-  padding: 10px 20px;
+  padding: 12px 20px;
   position: fixed;
   top: 0;
   z-index: 999;
@@ -60,7 +60,7 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Menu links */
+/* Desktop menu links */
 .nav-menu {
   display: flex;
   gap: 30px;
@@ -77,65 +77,141 @@ html, body {
 }
 
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0,0,0,0.05);
   color: #ff4949;
 }
 
-/* Hamburger styles - hidden on desktop */
+/* ---------------------- */
+/* Hamburger button */
+/* ---------------------- */
+
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
+  gap: 6px;
+  position: relative;
+  left: -30px; /* Shift left so it fits on iPhones */
 }
 
 .hamburger span {
-  width: 25px;
+  width: 28px;
   height: 3px;
   background: #8e4fd6;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  border-radius: 3px;
+  transition: 0.3s ease;
 }
 
-/* Hamburger animation when active */
+/* Hamburger animation */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
+/* ---------------------- */
+/* CLEAN MOBILE NAVBAR */
+/* ---------------------- */
 
+@media (max-width: 768px) {
+
+  /* Mobile menu panel */
   .nav-menu {
     position: absolute;
-    top: 100%;
+    top: 40px;
     left: 0;
     width: 100%;
+    display: none;
+
     flex-direction: column;
-    gap: 0;
-    background: #fff;
-    overflow: hidden;
+    padding: 15px 0;
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+
+    opacity: 0;
     max-height: 0;
-    transition: max-height 0.3s ease;
+    overflow: hidden;
+    transition:
+      opacity 0.25s ease,
+      max-height 0.35s ease;
   }
 
   .nav-menu.open {
-    max-height: 500px; /* large enough to show all links */
+    display: flex;
+    opacity: 1;
+    max-height: 300px;
   }
 
+  /* Mobile links aesthetics */
   .nav-link {
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
+    padding: 15px 25px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #8e4fd6;
+
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    transition: color 0.25s;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link:hover {
+    color: #d044d4;
+  }
+
+  /* Prettier hamburger button */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 10px;
+    transition: background 0.25s ease;
+  }
+
+  .hamburger:hover {
+    background: rgba(0,0,0,0.05);
+  }
+
+  .hamburger span {
+    width: 27px;
+    height: 3px;
+    background: #8e4fd6;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animated X icon */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 }
+
+
+
 
 
 
@@ -517,12 +593,16 @@ html, body {
   margin: 0 auto;
 }
 
+
+
 .podcast-embed iframe {
   width: 100%;
   height: 232px;    /* Spotify default embed height */
   border: none;
   display: block;
   border-radius: 0;
+  max-height: 232px !important;
+  min-height: 232px !important;
 }
 
 /* Mobile tweaks */
