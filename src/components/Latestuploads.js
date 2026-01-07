@@ -19,7 +19,7 @@ export default function LatestUploadsWithThumbnails() {
 
   return (
     <section className="latest-uploads-section" id="latest">
-      <h3 className="section-title">Latest Uploads</h3>
+      <h3 className="section-title">More Recent Uploads</h3>
 
       <div className="videos-grid">
         {videos.map((video, idx) => (

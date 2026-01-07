@@ -2,6 +2,14 @@ import React from "react";
 
 export default function Gallery() {
   const photos = [
+    "https://i.postimg.cc/pL2Wbh0Y/IMG-4618.jpg",
+    "https://i.postimg.cc/bYtNQjDf/IMG-4617.jpg",
+    "https://i.postimg.cc/3xSHsL41/IMG-4610.jpg",
+    "https://i.postimg.cc/gkZ875xy/IMG-4270.jpg",
+    "https://i.postimg.cc/25QVFRXW/IMG-4615.jpg",
+    "https://i.postimg.cc/FFjDd7ZQ/IMG-3870.jpg",
+    "https://i.postimg.cc/vmHpX50f/IMG-3750.jpg",
+    "https://i.postimg.cc/q70Fq2ff/IMG-4614.jpg",
     "https://i.postimg.cc/HLZkd594/IMG-3330.jpg",
     "https://i.postimg.cc/bJrfTBbx/IMG-2851.jpg",
     "https://i.postimg.cc/GhnPRNjz/IMG-2874.jpg",

@@ -100,7 +100,7 @@ export default function Reviews() {
   return (
     <section className="reviews-page">
       <h2 className="reviews-title">Flight Reviews</h2>
-      <p className="reviews-subtitle">My written airline & flight reviews.</p>
+      <p className="reviews-subtitle">My written airline & flight reviews. ...More coming soon!</p>
 
       {reviews.length === 0 ? (
         <div className="no-reviews">

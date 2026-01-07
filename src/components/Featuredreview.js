@@ -5,16 +5,16 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "kGnGlGt-Dco",
-    title: "IndiGo’s HIDDEN Dreamliner — Amsterdam to Mumbai",
+    id: "Aa03AJwh9f8",
+    title: "Flying my FAVOURITE Asian Airline! (Thai Airways)",
     description:
-      "My full review of IndiGo’s surprising long-haul Dreamliner service. A new experience, unexpected moments, and a totally different side of the airline.",
-    thumbnail: "https://i.postimg.cc/xjtd7H43/IN787-3.png",
+      "My full review of Thai Airways from Oslo to Bangkok in Economy Class! + why they are my favourite Asian airline.",
+    thumbnail: "https://i.postimg.cc/ZKbzsks5/os-il.png",
   };
 
   return (
     <section id="featured-review" className="featured-review-section">
-      <h3>⭐ Featured Review of the Month</h3>
+      <h3>⭐ Featured Review of the Month (Latest Upload)</h3>
 
       <div className="featured-card" onClick={() => setOpen(true)}>
         <img
