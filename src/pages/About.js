@@ -1,6 +1,7 @@
 import React from "react";
 import TopLists from "../components/Toplists";
 import Gallery from "../components/Gallery";
+import "../App.css";
 
 export default function About() {
   return (
@@ -88,8 +89,9 @@ export default function About() {
       <h2 className="about-title">Top Airlines & Airports</h2>
       <TopLists />
 
-      <h2 className="about-title">Travel Photos</h2>
       <Gallery />
+
+      
     </section>
   );
 }

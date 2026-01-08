@@ -342,11 +342,18 @@ html, body {
 }
 
 .about-me-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  justify-content: center;
+}
+
+.about-me-img:hover {
+  transform: scale(1.05);
 }
 
 .about-me-text {

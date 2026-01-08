@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <img 
-        src="https://i.postimg.cc/65JMk240/IMG-2865.jpg" 
+        src="https://i.postimg.cc/YCrpLHrJ/IMG-4619.jpg" 
         alt="Header Banner" 
         className="hero-image"
         style={{ filter: "blur(5px) brightness(0.7)" }} // blur + darken
@@ -23,7 +23,7 @@ export default function Hero() {
         />
 
         <h2>Welcome to Sean FH Travels</h2>
-        <p>Flight reviews, aviation stories, and travel adventures!</p>
+        <p>Flight reviews, aviation stories, and more!</p>
 
         <div className="hero-buttons">
 
