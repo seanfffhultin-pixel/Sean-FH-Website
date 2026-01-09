@@ -22,7 +22,9 @@ export default function Hero() {
           
         />
 
-        <h2>Welcome to Sean FH Travels</h2>
+        <div className="hero-welcome">
+          <h2>Welcome to Sean FH Travels</h2>
+        </div>
         <p>Flight reviews, aviation stories, and more!</p>
 
         <div className="hero-buttons">

@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="nav-container">
         {/* Logo */}
         <Link to="/" className="nav-logo">
-          Sean FH Travels
+          seanfh.com
         </Link>
 
         {/* Hamburger Icon */}

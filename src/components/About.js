@@ -7,11 +7,13 @@ export default function AboutMe() {
       <h3>About Me</h3>
 
       <div className="about-me-container">
+        <div className="about-me-img-wrapper">
         <img
           src="https://i.postimg.cc/tTNKs36X/IMG-0657.jpg"
           alt="Sean FH"
           className="about-me-img"
         />
+        </div>
 
         <div className="about-me-text">
           <p>
