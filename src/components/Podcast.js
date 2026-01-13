@@ -7,7 +7,7 @@ export default function Podcast() {
 
       <p className="podcast-description">
         Listen to episodes of AirAware right here on the site!  
-        Featuring aviation chat, flight reviews, travel news, and more.
+        Featuring the UNKNOWN history of aviation.
       </p>
 
       <div className="podcast-embed">

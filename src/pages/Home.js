@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";   // <-- FIXED
 
 import Hero from "../components/Hero"; 
+import FloatingVideoCard from "../components/FloatingVideoCard";
 import Latestuploads from "../components/Latestuploads";
 import Gallery from "../components/Gallery";
 import Socials from "../components/Socials";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <FloatingVideoCard />
       <About />
       <Featuredreview />
       <Latestuploads />
