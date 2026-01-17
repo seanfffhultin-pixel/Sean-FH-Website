@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "Aa03AJwh9f8",
-    title: "Flying my FAVOURITE Asian Airline! (Thai Airways)",
+    id: "n_o-uCUZOBQ",
+    title: "Is THIS Thai Airways? (Amazing DOMESTIC Flight!)",
     description:
-      "My full review of Thai Airways from Oslo to Bangkok in Economy Class! + why they are my favourite Asian airline.",
-    thumbnail: "https://i.postimg.cc/ZKbzsks5/os-il.png",
+      "This is what Thai Airways looks like when you fly domestically. From former Thai Smile Aircraft to surprise Snack boxes, does this really live up to the Thai Airways Premium Standard?",
+    thumbnail: "https://i.postimg.cc/hP5tm8vj/Thai-domestic-3.png",
   };
 
   return (

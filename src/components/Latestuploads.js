@@ -4,16 +4,16 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "Aa03AJwh9f8",
+      title: "Flying my FAVOURITE Asian Airline! (Thai Airways)",
+    },
+    {
       id: "kGnGlGt-Dco",
       title: "Flying ECONOMY on IndiGo’s Hidden Dreamliner (Amsterdam – Mumbai)",
     },
     {
       id: "WNAmr-5lGGk",
       title: "Ethiopian Airlines SAVED ME! (And They are AMAZING!)",
-    },
-    {
-      id: "AICcfhtgT90",
-      title: "You Should Try THIS Thai Sleeper Train!",
     },
   ];
 

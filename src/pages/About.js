@@ -61,7 +61,7 @@ export default function About() {
       {/* Block 3: Future Goals */}
       <div className="about-block">
         <img
-          src="https://i.postimg.cc/pVkZ72gh/IMG-0649.jpg"
+          src="https://i.postimg.cc/VkJ5ZGpH/IMG-4081.jpg"
           alt="Runway"
           className="about-img"
         />
