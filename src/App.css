@@ -74,8 +74,6 @@ html, body {
   display: flex;
   gap: 30px;
   list-style: none;
-  overflow: hidden;
-  isolation: isolate;
 }
 
 .nav-link {
