@@ -10,6 +10,10 @@ const videos = [
   {
     title: "Plane Spotting at Phuket's BEACH Airport!",
     url: "https://www.youtube.com/embed/9e5lkqjr8a0"
+  },
+  {
+    title: "The Reality of THAI AIRWAYS DOMESTIC...",
+    url: "https://www.youtube.com/embed/n_o-uCUZOBQ"
   }
 ];
 

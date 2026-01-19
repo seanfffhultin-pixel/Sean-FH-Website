@@ -6,7 +6,7 @@ export default function FeaturedReview() {
 
   const featured = {
     id: "n_o-uCUZOBQ",
-    title: "Is THIS Thai Airways? (Amazing DOMESTIC Flight!)",
+    title: "The Reality of THAI AIRWAYS DOMESTIC...",
     description:
       "This is what Thai Airways looks like when you fly domestically. From former Thai Smile Aircraft to surprise Snack boxes, does this really live up to the Thai Airways Premium Standard?",
     thumbnail: "https://i.postimg.cc/hP5tm8vj/Thai-domestic-3.png",
