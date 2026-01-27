@@ -79,7 +79,7 @@ export default function About() {
           </p>
           <p>
             If you're reading this, you’re probably already subscribed. 
-            But if not… what are you waiting for?   
+            But if not… what are you waiting for? -    
             <strong>Hit that button — it REALLY helps!</strong>
           </p>
         </div>

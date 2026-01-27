@@ -9,7 +9,7 @@ export default function FeaturedReview() {
     title: "The Reality of THAI AIRWAYS DOMESTIC...",
     description:
       "This is what Thai Airways looks like when you fly domestically. From former Thai Smile Aircraft to surprise Snack boxes, does this really live up to the Thai Airways Premium Standard?",
-    thumbnail: "https://i.postimg.cc/hP5tm8vj/Thai-domestic-3.png",
+    thumbnail: "https://i.postimg.cc/1RJg7djt/Thai-domestic-5.png",
   };
 
   return (
