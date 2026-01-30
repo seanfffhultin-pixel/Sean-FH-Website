@@ -6,7 +6,6 @@ import FloatingVideoCard from "../components/FloatingVideoCard";
 import Latestuploads from "../components/Latestuploads";
 import Gallery from "../components/Gallery";
 import Socials from "../components/Socials";
-import Footer from "../components/Footer";
 import About from "../components/About";
 import Featuredreview from "../components/Featuredreview";
 import Podcast from "../components/Podcast";
