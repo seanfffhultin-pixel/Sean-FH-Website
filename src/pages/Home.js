@@ -24,7 +24,6 @@ export default function Home() {
       <TopLists />
       <Gallery />
       <Socials />
-      <Footer />
     </>
   );
 }
