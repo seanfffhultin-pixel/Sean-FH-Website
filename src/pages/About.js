@@ -1,7 +1,7 @@
 import React from "react";
 import TopLists from "../components/Toplists";
 import Gallery from "../components/Gallery";
-import "../App.css";
+import AirlineCarousel from "../components/AirlineCarousel";
 
 export default function About() {
   return (
@@ -86,8 +86,14 @@ export default function About() {
       </div>
 
       {/* ✨ New Sections */}
-      <h2 className="about-title">Top Airlines & Airports</h2>
+
+      <AirlineCarousel />
+
+      <h2 className="about-title">My Top Airlines & Airports</h2>
+      
       <TopLists />
+
+      
 
       <Gallery />
 

@@ -5,13 +5,35 @@ body {
   color: #111;
 }
 
+/* ============================== */
+/* LAVA LAMP BACKGROUND EFFECT */
+/* ============================== */
+
 body {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #dddddd 100%
-  );
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 30%, #fef6f7 0%, transparent 90%),
+    radial-gradient(circle at 80% 40%, #f1e8ff 0%, transparent 30%),
+    radial-gradient(circle at 50% 80%, #e7f4ff 0%, transparent 45%),
+    #ffffff;
+
+  background-size: 200% 200%;
+  animation: lavaMove 25s ease-in-out infinite;
 }
+
+/* Animation */
+@keyframes lavaMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 
 h1, h2, h3 {
@@ -32,9 +54,10 @@ html, body {
   width: 100%;
 }
 
-html {
+body {
   scroll-behavior: smooth;
 }
+
 
 
 /* ---------------------- */
@@ -209,7 +232,7 @@ html {
   width: 100%;
   height: 2.5px;
 
-  filter: blur(0.5px);
+  filter: blur(0px);
 
 
   background: transparent;
@@ -236,6 +259,11 @@ html {
   border-radius: 10px;
 
   transition: width 0.1s linear;
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(5px);
+  background: rgba(255,255,255,0.9);
 }
 
 
@@ -530,6 +558,8 @@ html {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 24px rgba(255,0,0,0.45);
 }
+
+
 
 /* ---------------------- */
 /* Floating Video Card */
@@ -987,16 +1017,26 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 10px 17px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   border: none;
-  background-color: rgba(230, 57, 70, 0.85);
+  background: rgba(230, 57, 70, 0.9);
   color: white;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   transition: transform 0.2s ease, background 0.3s ease;
-  z-index: 10;
+  z-index: 5;
 }
+
+
+
+
 
 .top-lists-wrapper .carousel-btn:hover {
   transform: translateY(-50%) scale(1.15);
@@ -1304,6 +1344,184 @@ html {
     width: 100%;
   }
 }
+
+/* ---------------------- */
+/* Wrapper + Card Style   */
+/* ---------------------- */
+
+.airline-carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 80px 20px;
+}
+
+.airline-carousel-section {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 30px 34px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 850px;
+}
+
+
+.airline-carousel-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+/* ---------------------- */
+/* Title                  */
+/* ---------------------- */
+
+.airline-carousel-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+/* ---------------------- */
+/* Carousel Container     */
+/* ---------------------- */
+
+.airline-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* LOCKED HEIGHT = NO JUMPING */
+
+.airline-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  height: 130px;
+}
+
+
+/* ---------------------- */
+/* Sliding Track          */
+/* ---------------------- */
+
+.airline-carousel-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+/* Each Logo Slot */
+
+.airline-carousel-item {
+  min-width: 33.33%;
+  padding: 0 14px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+/* Logo Image (NO MORPHING) */
+
+.airline-carousel-item img {
+  max-width: 95%;
+  max-height: 95px;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.airline-carousel-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: transform;
+  transition:
+    transform 0.45s cubic-bezier(.22,.61,.36,1),
+    box-shadow 0.45s cubic-bezier(.22,.61,.36,1);
+  border-radius: 12px;
+}
+
+.airline-carousel-logo:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 8px rgba(0,0,0,0.10);
+}
+
+.airline-carousel-logo img {
+  max-width: 95%;
+  max-height: 95px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+
+/* ---------------------- */
+/* Arrow Buttons          */
+/* ---------------------- */
+
+.airline-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(230, 57, 70, 0.9);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+  z-index: 5;
+}
+
+.airline-carousel-btn:hover {
+  transform: translateY(-50%) scale(1.12);
+  background: rgba(230, 57, 70, 1);
+}
+
+/* Button Positions */
+
+.airline-carousel-btn-left {
+  left: -18px;
+}
+
+.airline-carousel-btn-right {
+  right: -18px;
+}
+
+/* ---------------------- */
+/* Mobile Adjustments     */
+/* ---------------------- */
+
+@media (max-width: 768px) {
+
+  .airline-carousel-section {
+    padding: 16px;
+  }
+
+  .airline-carousel-viewport {
+    height: 75px;
+  }
+
+  .airline-carousel-item img {
+    max-height: 55px;
+  }
+
+}
+
+
 
 
 
