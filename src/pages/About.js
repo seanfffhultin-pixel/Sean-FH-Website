@@ -89,7 +89,7 @@ export default function About() {
 
       <AirlineCarousel />
 
-      <h2 className="about-title">My Top Airlines & Airports</h2>
+      
       
       <TopLists />
 
