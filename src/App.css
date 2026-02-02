@@ -959,129 +959,251 @@ body {
 
 
 
+/* ================================ */
+/* WRAPPER FOR MULTIPLE CARDS       */
+/* ================================ */
+
 /* ---------------------- */
 /* Top Lists Wrapper      */
 /* ---------------------- */
 .top-lists-wrapper {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin: 80px 20px;
-  align-items: flex-start;
-}
-
-/* Ensure each carousel looks consistent */
-.top-lists-wrapper .carousel-section {
-  background: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.top-lists-wrapper .carousel-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
-}
-
-/* Carousel container */
-.top-lists-wrapper .carousel-container {
-  position: relative;
-  margin: auto;
-}
-
-/* Carousel images */
-.top-lists-wrapper .carousel-img {
+  margin: 80px 0;
   width: 100%;
-  border-radius: 12px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-sizing: border-box;
+  padding: 0 20px; /* small mobile spacing */
 }
 
-.top-lists-wrapper .carousel-img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* Carousel title */
-.top-lists-wrapper .carousel-title {
-  margin-top: 12px;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  text-align: center;
-}
-
-/* Carousel buttons */
-.top-lists-wrapper .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(230, 57, 70, 0.9);
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-  cursor: pointer;
+/* Inner container holding both cards */
+.top-lists-inner {
   display: flex;
-  align-items: center;
+  justify-content: center; /* ensures centering */
+  gap: 40px;
+  flex-wrap: wrap; /* wraps on small screens */
+  max-width: 1500px; /* max total width of both cards + gap */
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Each card wrapper */
+.top-lists-card-wrapper {
+  display: flex;       /* allows inner card to center properly */
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease, background 0.3s ease;
-  z-index: 5;
+  flex: 0 0 48%;       /* exact width for 2 cards + 4% gap leftover */
+  min-width: 300px;    /* ensures mobile responsiveness */
+  box-sizing: border-box;
 }
 
 
 
 
 
-.top-lists-wrapper .carousel-btn:hover {
-  transform: translateY(-50%) scale(1.15);
-  background-color: rgba(230, 57, 70, 1);
-}
+/* ---------------------- */
+/* Mobile Adjustments     */
+/* ---------------------- */
 
-/* Buttons positions */
-.top-lists-wrapper .carousel-btn-left {
-  left: -10px;
-}
-.top-lists-wrapper .carousel-btn-right {
-  right: -10px;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   .top-lists-wrapper {
+    flex-wrap: wrap;      /* allow wrapping on smaller screens */
     gap: 20px;
   }
 
-  .top-lists-wrapper .carousel-section {
-    padding: 15px;
+  .airline-carousel-section,
+  .airport-carousel-section {
+    flex: 1 1 100%;       /* full width on mobile */
+    max-width: none;
+    min-width: auto;
   }
 }
 
 
 
+/* ================================ */
+/* CAROUSEL CARD (BIG, PREMIUM)     */
+/* ================================ */
+.carousel-section {
+  background: #fff;
+  border-radius: 22px;
+  padding: 28px;
+  flex: 1 1 520px; /* large card */
+  max-width: 580px;
 
-/* ---------------------- */
-/* Smooth fade animation */
-/* ---------------------- */
-.carousel-fade {
-  animation: fadeSlide 0.5s ease forwards;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* for buttons */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-@keyframes fadeSlide {
+.carousel-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(0,0,0,0.28);
+}
+
+/* ================================ */
+/* HEADING */
+.carousel-heading {
+  font-size: 27px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+/* ================================ */
+/* IMAGE FRAME */
+.carousel-container {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-image-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+/* ================================ */
+/* IMAGE */
+.carousel-img {
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+  border-radius: 16px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.carousel-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+}
+
+.airline-carousel-section,
+.airport-carousel-section {
+  width: 100%;
+  max-width: 500px; /* same for both cards */
+  flex-shrink: 0;   /* prevent cards from shrinking differently */
+}
+
+
+/* ================================ */
+/* FADE EFFECT */
+.fade {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: scale(0.97);
+    opacity: 0.9;
+    transform: scale(0.96);
   }
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
+
+/* ================================ */
+/* TITLE */
+.carousel-title {
+  margin-top: 14px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ================================ */
+/* BUTTONS (ALWAYS VISIBLE) */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(230,57,70,0.95);
+  color: #fff;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 10;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-50%) scale(1.15);
+  background: rgba(230,57,70,1);
+}
+
+.carousel-btn-left {
+  left: -28px;
+}
+
+.carousel-btn-right {
+  right: -28px;
+}
+
+/* ================================ */
+/* RESPONSIVE MOBILE */
+@media (max-width: 900px) {
+  .top-lists-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 16px;
+    margin: 70px auto;
+  }
+
+  .carousel-section {
+    max-width: 100%;
+    flex: 1 1 100%;
+    padding: 24px;
+  }
+
+  .carousel-heading {
+    font-size: 20px;
+  }
+
+  .carousel-title {
+    font-size: 16px;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .carousel-heading {
+    font-size: 20px;
+  }
+
+  .carousel-title {
+    font-size: 20px;
+  }
+}
+
+
 
 
 /* ---------------------- */
@@ -1611,3 +1733,6 @@ body {
   line-height: 1.6;
   color: #555;
 }
+
+
+

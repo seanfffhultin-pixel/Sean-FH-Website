@@ -4,23 +4,14 @@ import TopAirports from "./Topairports";
 
 export default function TopLists() {
   return (
-    <section
-      className="top-lists-wrapper"
-      style={{
-        display: "flex",
-        gap: "40px",
-        justifyContent: "center",
-        flexWrap: "wrap", // wraps on smaller screens
-        margin: "80px 20px",
-        alignItems: "flex-start",
-      }}
-    >
-      <div style={{ flex: "1 1 400px", minWidth: "300px" }}>
-        <TopAirlines />
-      </div>
-
-      <div style={{ flex: "1 1 400px", minWidth: "300px" }}>
-        <TopAirports />
+    <section className="top-lists-wrapper">
+      <div className="top-lists-inner">
+        <div className="top-lists-card-wrapper">
+          <TopAirlines />
+        </div>
+        <div className="top-lists-card-wrapper">
+          <TopAirports />
+        </div>
       </div>
     </section>
   );

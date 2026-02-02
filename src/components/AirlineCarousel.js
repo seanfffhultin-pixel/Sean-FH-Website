@@ -39,42 +39,40 @@ const airlines = [
 ];
 
 
-// Duplicate array for seamless looping
 const loopedAirlines = [...airlines, ...airlines, ...airlines];
 
 export default function AirlineCarousel() {
   const startIndex = airlines.length;
   const [index, setIndex] = useState(startIndex);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const nextSlide = () => {
+    if (isAnimating) return; // ignore clicks during animation
     setIndex((prev) => prev + 1);
+    setIsAnimating(true);
   };
 
   const prevSlide = () => {
+    if (isAnimating) return; // ignore clicks during animation
     setIndex((prev) => prev - 1);
+    setIsAnimating(true);
   };
 
   const handleTransitionEnd = () => {
-    if (index >= airlines.length * 2) {
-      setIndex(startIndex);
-    }
+    // reset position for infinite loop
+    if (index >= airlines.length * 2) setIndex(startIndex);
+    if (index <= 0) setIndex(startIndex);
 
-    if (index <= 0) {
-      setIndex(startIndex);
-    }
+    // allow next click
+    setIsAnimating(false);
   };
 
   return (
     <div className="airline-carousel-wrapper">
-
       <div className="airline-carousel-section">
-
-        <h3 className="airline-carousel-title">
-          Airlines I've Flown
-        </h3>
+        <h3 className="airline-carousel-title">Airlines I've Flown</h3>
 
         <div className="airline-carousel-container">
-
           <button
             className="airline-carousel-btn airline-carousel-btn-left"
             onClick={prevSlide}
@@ -83,26 +81,22 @@ export default function AirlineCarousel() {
           </button>
 
           <div className="airline-carousel-viewport">
-
             <div
               className="airline-carousel-track"
-              onTransitionEnd={handleTransitionEnd}
               style={{
-                transform: `translateX(-${index * 33.33}%)`
+                transform: `translateX(-${index * 33.33}%)`,
+                transition: "transform 0.45s cubic-bezier(.22,.61,.36,1)"
               }}
+              onTransitionEnd={handleTransitionEnd}
             >
-
               {loopedAirlines.map((img, i) => (
-                <div className="airline-carousel-item">
-                    <div className="airline-carousel-logo">
-                        <img src={img} alt="Airline logo" />
-                    </div>
+                <div className="airline-carousel-item" key={i}>
+                  <div className="airline-carousel-logo">
+                    <img src={img} alt="Airline logo" />
+                  </div>
                 </div>
-
               ))}
-
             </div>
-
           </div>
 
           <button
@@ -111,11 +105,8 @@ export default function AirlineCarousel() {
           >
             ›
           </button>
-
         </div>
-
       </div>
-
     </div>
   );
 }
