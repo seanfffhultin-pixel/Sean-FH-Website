@@ -31,11 +31,14 @@ const airlines = [
   "https://i.postimg.cc/L8gmSsT3/Air-Berlin-Logo-svg.png",
   "https://i.postimg.cc/dtdsC1bn/us-airways-3-logo-png-transparent.png",
   "https://i.postimg.cc/1XWymn2H/9008ffa0ee183844559da1714a7d585ff0a8b4c1.png",
+  "https://i.postimg.cc/rsQJpczh/Germanwing-s-logo.jpg",
+  "https://i.postimg.cc/kGfc59DL/Nok-Air-Logo-og.png",
     "https://i.postimg.cc/RhTNcZY8/Thai-Airways-logo-svg.png",
     "https://i.postimg.cc/X78C5sS1/britishairways-21686125301575-thumb.jpg",
     "https://i.postimg.cc/t49rznV6/FR-copy.png",
     "https://i.postimg.cc/gjqVw44Y/Flybe-copy-svg.png",
     "https://i.postimg.cc/mrhCBCnk/Turkish-Airlines-logo-2019-compact-svg.png",
+
 ];
 
 

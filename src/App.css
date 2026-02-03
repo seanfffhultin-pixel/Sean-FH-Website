@@ -1024,11 +1024,14 @@ body {
 /* CAROUSEL CARD (BIG, PREMIUM)     */
 /* ================================ */
 .carousel-section {
+
   background: #fff;
-  border-radius: 22px;
-  padding: 28px;
-  flex: 1 1 520px; /* large card */
-  max-width: 580px;
+  border-radius: 16px;
+  padding: 20px 22px;   /* slightly slimmer */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* softer shadow */
+  border: 1px solid rgba(0,0,0,0.05);     /* thin premium border */
+
+
 
   box-shadow: 0 14px 36px rgba(0,0,0,0.18);
   display: flex;
@@ -1038,10 +1041,12 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.carousel-section:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 22px 48px rgba(0,0,0,0.28);
+.carousel-section:hover,
+.airline-carousel-section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
+
 
 /* ================================ */
 /* HEADING */
@@ -1075,10 +1080,12 @@ body {
 /* IMAGE */
 .carousel-img {
   max-width: 95%;
-  max-height: 95%;
+  max-height: 500px;
   object-fit: contain;
   border-radius: 16px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .carousel-img:hover {
@@ -1164,18 +1171,22 @@ body {
 
 /* ================================ */
 /* RESPONSIVE MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .top-lists-wrapper {
-    flex-direction: column;
-    gap: 40px;
-    padding: 0 16px;
-    margin: 70px auto;
+   
+    margin: 40px 12px;
+    gap: 24px;
   }
 
-  .carousel-section {
+  .top-lists-card-wrapper {
+    flex: 0 0 100%;
     max-width: 100%;
-    flex: 1 1 100%;
-    padding: 24px;
+  }
+
+  .carousel-section,
+  .airline-carousel-section {
+    width: 100%;
+    padding: 22px;
   }
 
   .carousel-heading {
@@ -1192,6 +1203,14 @@ body {
     font-size: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  .carousel-img,
+  .airline-carousel-item img {
+    max-height: 4000px;
+  }
+}
+
 
 @media (max-width: 500px) {
   .carousel-heading {
@@ -1481,7 +1500,7 @@ body {
   background: #fff;
   border-radius: 18px;
   padding: 28px 30px 34px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   max-width: 850px;
