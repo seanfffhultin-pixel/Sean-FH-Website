@@ -1,14 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
+
 
 export default function TopAirlines() {
 
-  const airlines = [
+  const airlines = useMemo(() => [
     { name: "1. Singapore Airlines", img: "https://i.postimg.cc/KzzMxmX9/IMG-0775.jpg" },
     { name: "2. Etihad Airways", img: "https://i.postimg.cc/JnHGgBTS/IMG-4610.jpg" },
     { name: "3. Turkish Airlines", img: "https://i.postimg.cc/9fXpw55x/IMG-1674.jpg" },
     { name: "4. Cathay Pacific", img: "https://i.postimg.cc/nLk8Z0Pk/IMG-4611.jpg" },
     { name: "5. Thai Airways", img: "https://i.postimg.cc/qM8XmMpb/IMG-0403.jpg" },
-  ];
+  ], []);
+
 
   const [current, setCurrent] = useState(0);
   const isAnimating = useRef(false);
@@ -24,7 +26,8 @@ export default function TopAirlines() {
       img.src = item.img;
     });
 
-  }, [current]);
+  }, [current, airlines]);
+
 
   /* Controlled transitions */
 

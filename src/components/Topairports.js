@@ -1,14 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
+
 
 export default function TopAirports() {
 
-  const airports = [
+  const airports = useMemo(() => [
     { name: "1. Changi Airport, Singapore (SIN)", img: "https://i.postimg.cc/brfLJGz8/IMG-3428.jpg" },
     { name: "2. Suvarnabhumi Airport, Bangkok (BKK)", img: "https://i.postimg.cc/kX9fPt1h/IMG-3429.jpg" },
     { name: "3. Zayed Airport, Abu Dhabi (AUH)", img: "https://i.postimg.cc/25FqYNYF/IMG-4612.jpg" },
     { name: "4. Chek Lap Kok Airport, Hong Kong (HKG)", img: "https://i.postimg.cc/gkXnJZdm/IMG-4613.jpg" },
     { name: "5. Istanbul Airport, Istanbul (IST)", img: "https://i.postimg.cc/d0zjH7Zj/IMG-3430.jpg" },
-  ];
+  ], []);
 
   const [current, setCurrent] = useState(0);
   const isAnimating = useRef(false);
@@ -24,7 +25,7 @@ export default function TopAirports() {
       img.src = item.img;
     });
 
-  }, [current]);
+  }, [current, airports]);
 
   /* Controlled slide change */
 
