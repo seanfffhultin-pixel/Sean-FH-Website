@@ -969,16 +969,20 @@ body {
 .top-lists-wrapper {
   display: flex;
   justify-content: center;
-  margin: 80px 0;
+  align-items: center;
+  margin: 80px auto;
   width: 100%;
   box-sizing: border-box;
   padding: 0 20px; /* small mobile spacing */
+  gap: 40px;
+  max-width: 1600px; /* max width for the entire section */
 }
 
 /* Inner container holding both cards */
 .top-lists-inner {
   display: flex;
   justify-content: center; /* ensures centering */
+  align-items: center;
   gap: 40px;
   flex-wrap: wrap; /* wraps on small screens */
   max-width: 1500px; /* max total width of both cards + gap */
@@ -991,10 +995,16 @@ body {
 .top-lists-card-wrapper {
   display: flex;       /* allows inner card to center properly */
   justify-content: center;
+  align-items: center;
   flex: 0 0 48%;       /* exact width for 2 cards + 4% gap leftover */
   min-width: 300px;    /* ensures mobile responsiveness */
   box-sizing: border-box;
+  margin: 0 auto;
 }
+
+
+
+
 
 
 
@@ -1006,8 +1016,20 @@ body {
 
 @media (max-width: 400px) {
   .top-lists-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 0 20px;
     flex-wrap: wrap;      /* allow wrapping on smaller screens */
     gap: 20px;
+  }
+
+  .top-lists-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .airline-carousel-section,
@@ -1030,6 +1052,10 @@ body {
   padding: 20px 22px;   /* slightly slimmer */
   box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* softer shadow */
   border: 1px solid rgba(0,0,0,0.05);     /* thin premium border */
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  
 
 
 
@@ -1039,6 +1065,7 @@ body {
   align-items: center;
   position: relative; /* for buttons */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  
 }
 
 .carousel-section:hover,
@@ -1062,6 +1089,7 @@ body {
 .carousel-container {
   position: relative;
   width: 100%;
+  margin: 0 auto;
 }
 
 .carousel-image-frame {
@@ -1152,7 +1180,7 @@ body {
   justify-content: center;
 
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  z-index: 10;
+  z-index: 3;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
@@ -1162,25 +1190,36 @@ body {
 }
 
 .carousel-btn-left {
-  left: -28px;
+  left: -14px;
 }
 
 .carousel-btn-right {
-  right: -28px;
+  right: -14px;
 }
 
 /* ================================ */
 /* RESPONSIVE MOBILE */
 @media (max-width: 1100px) {
   .top-lists-wrapper {
-   
-    margin: 40px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 0 20px;
     gap: 24px;
+  }
+
+  .top-lists-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .top-lists-card-wrapper {
     flex: 0 0 100%;
     max-width: 100%;
+    width: 100%;
   }
 
   .carousel-section,
@@ -1204,7 +1243,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .carousel-img,
   .airline-carousel-item img {
     max-height: 4000px;
@@ -1212,13 +1251,31 @@ body {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 1100px) {
   .carousel-heading {
     font-size: 20px;
   }
 
   .carousel-title {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-btn-left {
+    left: 8px;
+  }
+
+  .carousel-btn-right {
+    right: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1635,11 +1692,11 @@ body {
 /* Button Positions */
 
 .airline-carousel-btn-left {
-  left: -18px;
+  left: -14px;
 }
 
 .airline-carousel-btn-right {
-  right: -18px;
+  right: -14px;
 }
 
 /* ---------------------- */
