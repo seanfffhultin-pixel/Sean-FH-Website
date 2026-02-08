@@ -8,7 +8,7 @@ export default function Socials() {
 
       <div className="social-buttons">
         <a 
-          href="https://www.instagram.com/sean_fh_travels"
+          href="https://www.instagram.com/seanfhtravels?igsh=c3J0MGVtdnY2d3A0&utm_source=qr"
           target="_blank"
           rel="noreferrer"
           className="social-btn instagram"

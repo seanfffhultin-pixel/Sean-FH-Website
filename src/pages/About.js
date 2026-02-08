@@ -2,6 +2,7 @@ import React from "react";
 import TopLists from "../components/Toplists";
 import Gallery from "../components/Gallery";
 import AirlineCarousel from "../components/AirlineCarousel";
+import AircraftCarousel from "../components/AircraftCarousel";
 
 export default function About() {
   return (
@@ -86,13 +87,17 @@ export default function About() {
       </div>
 
       {/* ✨ New Sections */}
-
+      
       <AirlineCarousel />
 
       
       
       <TopLists />
 
+
+
+      <AircraftCarousel />
+      
       
 
       <Gallery />
