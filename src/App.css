@@ -1916,19 +1916,23 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
+/* Each review takes full width */
 .reviews-grid {
   margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 25px;
 }
 
+/* Review card layout: image + content */
 .review-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
   padding: 25px;
   background: white;
   border-radius: 18px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1937,10 +1941,41 @@ body {
   box-shadow: 0 10px 26px rgba(0,0,0,0.15);
 }
 
+/* Image wrapper */
+.review-img-wrapper {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.review-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.review-img-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+/* Content next to the image */
+.review-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left align everything by default */
+  text-align: left; /* Ensure text aligns left */
+  gap: 4px; /* reduce spacing between title, stars, and flight/date */
+}
+
 .review-airline {
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .review-flight {
@@ -1951,12 +1986,12 @@ body {
 .review-date {
   font-size: 14px;
   color: #777;
-  margin-bottom: 12px;
+  margin-bottom: 2px;
 }
 
 .review-rating {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 4px;
   color: #f5b100; /* gold */
 }
 
@@ -1966,5 +2001,23 @@ body {
   color: #555;
 }
 
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .review-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  .review-img-wrapper {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
 
+  .review-content {
+    width: 100%;
+    align-items: center; /* Center on mobile */
+    text-align: center;
+  }
+}
