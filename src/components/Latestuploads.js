@@ -5,7 +5,7 @@ export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
       id: "Aa03AJwh9f8",
-      title: "Flying my FAVOURITE Asian Airline! (Thai Airways)",
+      title: "LONG-HAUL On Asia's UNDERDOG! (Does It Live Up To The Rest?)",
     },
     {
       id: "kGnGlGt-Dco",

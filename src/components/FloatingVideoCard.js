@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 
 const videos = [
   {
-    title: "Flying my FAVOURITE Asian Airline! (Thai Airways)",
+    title: "LONG-HAUL On Asia's UNDERDOG! (Does It Live Up To The Rest?)",
     url: "https://www.youtube.com/embed/Aa03AJwh9f8"
   },
   {

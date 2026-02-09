@@ -875,6 +875,7 @@ body {
   box-shadow: 0 8px 30px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden; /* eliminates the bottom lip */
+  max-height: 1000px;
 }
 
 .podcast-section:hover {
@@ -901,22 +902,43 @@ body {
 /* Podcast Embed Wrapper */
 .podcast-embed {
   width: 100%;
+  
   border-radius: 15px;
   overflow: hidden; /* ensures no lip */
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  margin: 0 auto;
+
+  margin: 40px auto;
+  gap: 20px;
+  display: grid;
 }
+
+.spotify-embed iframe {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  background: #121212;
+  height: 232px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.apple-embed iframe {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+  background: #ffffff;
+
+  height: 450px; /* Adjust height as needed */
+  
+  overflow: hidden !important;
+}
+
 
 
 
 .podcast-embed iframe {
   width: 100%;
-  height: 232px;    /* Spotify default embed height */
+      /* Spotify default embed height */
   border: none;
   display: block;
   border-radius: 0;
-  max-height: 232px !important;
+  max-height: 802px !important;
   min-height: 232px !important;
+  max-width: 1500px;
 }
 
 /* Mobile tweaks */
@@ -2007,12 +2029,15 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    overflow: hidden;
   }
 
   .review-img-wrapper {
     width: 100%;
     max-width: 300px;
     height: auto;
+    display: block;          /* removes inline baseline gap */
+    line-height: 0;
   }
 
   .review-content {
@@ -2021,3 +2046,7 @@ body {
     text-align: center;
   }
 }
+
+
+
+

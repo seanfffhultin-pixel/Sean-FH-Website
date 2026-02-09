@@ -3,6 +3,14 @@ import React from "react";
 // ✨ Add your reviews below — just copy/paste the template!
 const reviews = [
   {
+  airline: "EasyJet",
+  flight: "U25707 SEN → AMS",
+  date: "December 2025",
+  rating: 4,
+  img: "https://i.postimg.cc/vmp70xLS/Image.png",
+  text: "Southend Airport has always been special to me, being the smallest London airport it means the experience is super quick and efficient, though the shops airside were a little underwhelming I still was very impressed - it is now my favourite London Airport! This was one of the most exciting flights I've taken in a while, and it was a great way to kick off the trip. The flight was smooth and uneventful, but the highlight was the beauftiful view over the English channel and the incredible landing into the foggiest airport I've ever seen, literally under 20 meters visibility. The crew was friendly and efficient, and the overall experience was enjoyable, making it a memorable start to an exciting series of flights."
+},
+  {
   airline: "IndiGo",
   flight: "6E1052 BKK → BOM",
   date: "November 2025",
