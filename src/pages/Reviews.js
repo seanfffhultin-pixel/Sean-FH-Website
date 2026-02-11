@@ -2,6 +2,22 @@ import React from "react";
 
 // ✨ Add your reviews below — just copy/paste the template!
 const reviews = [
+      {
+  airline: "SPECIAL Etihad (non Youtube review)",
+  flight: "EY870 AUH → HKG",
+  date: "December 2025",
+  rating: 5,
+  img: "https://i.postimg.cc/qvf8xdW5/Screenshot-2026-02-11-at-22-26-44.png",
+  text: "I was heavily debating not including this review as it was not filmed for YouTube, but it was one of the most eventful flights of my life. So this was meant to just be a normal flight from Abu Dhabi to Hong Kong, the usual Etihad experience, with a great seat (including cool remote controls - I made a YT short about that). But when we arrived into Hong Kong and got to the gate, we were told to sit down and check our valuables if anything had been STOLEN! WE WERE WAITING FOR THE POLICE!!! It turns out that a group of coordinated asian men had stolen a diamond necklace and diamond ring from a passengeer who I only assume had brought it to Hong Kong to get good luck? Anyway, the police boarded our aircraft and started going to specific rows where those men had sat, they then proceeded to rip apart the seats, tearing of the seat cushions and pointing flashlights down the ridges. After about half an hour of this and a few men being escorted off the plane with luggage to be searched in a seperate jet bridge, we were let off the plane. What a crazy experience, too bad I didn't film the flight or anything - I could've started then and there, but then again I don't want trouble with Chinese police! But overall the flight was pretty good, but nothing too much different from a similar Etiahd flight I reviewed later in the trip (though on the 787-10 instead of the -9 (the -9 has remote controls and the -10 does not)). But still a crazy experience!!! ---------------- It turns out the men are adjacent to the Hong Kong mafia and are made to go onto these flights and steal valuables - it is also a repeated thing (has happened something like 5 times already!), and on this route aswell, which is a little worrying! there is a really detailed article about this incident on Simple flying, go check that out for more!"
+},
+    {
+  airline: "Etihad",
+  flight: "EY58 BRU → AUH",
+  date: "December 2025",
+  rating: 5,
+  img: "https://i.postimg.cc/HnZyyqXt/Image.png",
+  text: "This is one of Etihad's oldest aircraft, and it does show, from older IFE moniters, dated cabin design to fairly worn seats, you could tell this aircraft was nearly 14 years old, however I do commend Etihad for keeping it in such good condition and reupolstering the seats with the new design. All together I found the crew were very attentive and friendly, the food included options like beef and mash, chicken and rice or some curry, and the content on option was extensive, maybe not as much as the newer A350s (hint hint) but still miles ahead than the likes of Norse/Indigo. I really enjoyed this flight and I'm very glad we got seats in the last few rows where the cabin is slimmer so it is configured 2-4-2 instead of 3-4-3, otherwise I think my experience would have been a litttle different. Overall, Etihad blew away my expectations and I have alot more Etihad content to come. PLUS Etihad's hub in Abu Dhabi is georgous - a beautiful blend of modern architecture and traditional sandy destert tones! Very easy to transit in - very fast, and a great amount of shops and restaurants to pass time. (though our connections were very close together!)"
+},
   {
   airline: "EasyJet",
   flight: "U25707 SEN → AMS",

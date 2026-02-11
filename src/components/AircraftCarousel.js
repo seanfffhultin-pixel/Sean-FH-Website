@@ -31,6 +31,7 @@ const aircraft = [
   "de Havilland Canada Dash 8-400",
   "Saab 2000",
   "BAE Systems Avro RJ100",
+  "Cessna 172 Skyhawk",
   "ATR 72",
 ];
 

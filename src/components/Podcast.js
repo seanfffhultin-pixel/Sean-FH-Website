@@ -8,6 +8,7 @@ export default function Podcast() {
       <p className="podcast-description">
         Listen to episodes of AirAware right here on the site!  
         Featuring the UNKNOWN history of aviation.
+        Available on most podcast platforms, including Spotify and Apple Podcasts.
       </p>
 
       <div className="podcast-embed spotify-embed">

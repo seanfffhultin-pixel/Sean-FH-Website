@@ -1663,7 +1663,7 @@ body {
 
 .aircraft-carousel-card:hover {
   transform: scale(1.06);
-  box-shadow: 0 12px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
 }
 
 /* ---------------------- */
@@ -1829,7 +1829,7 @@ body {
 
 .airline-carousel-logo:hover {
   transform: scale(1.06);
-  box-shadow: 0 12px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
 }
 
 .airline-carousel-logo img {
