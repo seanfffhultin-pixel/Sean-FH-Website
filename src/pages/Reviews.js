@@ -2,15 +2,31 @@ import React from "react";
 
 // ✨ Add your reviews below — just copy/paste the template!
 const reviews = [
-      {
+  {
+  airline: "Etihad",
+  flight: "EY489 KUL → AUH",
+  date: "January 2026",
+  rating: 5,
+  img: "https://i.postimg.cc/GtdC1FJ8/654EEC28-431E-4D86-95C1-0BA5187DCBA3.png",
+  text: "This was probably the most flawless flight I've taken in a LONG TIME, and definitely the best Etihad flight I took on this trip. We started off in Kuala Lumpur, and got to the airport, now I do have a few comments on the airport's interesting design but I'll leave that for the video, anyway, we got onto the plane and although the seats lacked the cool remotes that the 787-9 had, this 787-10 was still very nice, with very comfy seats, and one of the largest pillows I've ever seen in economy class, as well as a very fluffy blanket. The IFE was also very good, much better than the 777 I'd flown earlier in the trip, a much wider selection of everything, and just a much larger and higher resolution screen! The food was, like last time, great, with plenty of options - including a classic pasta dish, some mash with beef, and a chicken and rice option, all served with the usual sides. And of course, this flight wasn't that long (~7 hours) so I wasn't expecting a second meal service. However, they did come round with drinks mulitple times and towards the end served OREOS (with a more extensive dinks selection of course) - I believe they did have a little snack bar at the rear galley but I didn't check... So overall, this was a great flight with flawless... EVERYTHING! I applaud Etihad for this brilliant flight!"
+},
+  {
+  airline: "Cathay Pacific",
+  flight: "CX789 HKG → BKK",
+  date: "December 2025",
+  rating: 5,
+  img: "https://i.postimg.cc/Bnzz4TBW/Image.png",
+  text: "This is one of the flights that I have been looking forward to since I booked it, I've always wanted to fly Cathay Pacific and although this flight was only ~3 hours long, it more than lived up to the hype that the internet had fed me, it exceeded it with flying colors! I started of this flight at Hong Kong's Chek Lap Kok airport - the one with the bridge - and we boarded the beauty, the A330. The crew's service was top-notch and I very much enjoyed the massive selection on offer on Cathay's IFE. As well as this, Cathay's in-house catering in Hong Kong did a fantastic job with the food, very delicious - it even came with complementary ICECREAM! Although the cabin was a little dated, and maybe the flight was shorter than I had hoped, and maybe I didn't get to try Cathay's FULL Long-Haul experience, I was more than happy with this flight, and a massive upgrade from the competition - the likes of THAI (sorry), AirAsia, Hong Kong Express (which is owned by Cathay Pacific) etc. Overall, this flight was great, VERY NICE, I would 100% do it again (maybe even long-haul in the future??)!"
+},
+  {
   airline: "SPECIAL Etihad (non Youtube review)",
   flight: "EY870 AUH → HKG",
   date: "December 2025",
   rating: 5,
   img: "https://i.postimg.cc/qvf8xdW5/Screenshot-2026-02-11-at-22-26-44.png",
-  text: "I was heavily debating not including this review as it was not filmed for YouTube, but it was one of the most eventful flights of my life. So this was meant to just be a normal flight from Abu Dhabi to Hong Kong, the usual Etihad experience, with a great seat (including cool remote controls - I made a YT short about that). But when we arrived into Hong Kong and got to the gate, we were told to sit down and check our valuables if anything had been STOLEN! WE WERE WAITING FOR THE POLICE!!! It turns out that a group of coordinated asian men had stolen a diamond necklace and diamond ring from a passengeer who I only assume had brought it to Hong Kong to get good luck? Anyway, the police boarded our aircraft and started going to specific rows where those men had sat, they then proceeded to rip apart the seats, tearing of the seat cushions and pointing flashlights down the ridges. After about half an hour of this and a few men being escorted off the plane with luggage to be searched in a seperate jet bridge, we were let off the plane. What a crazy experience, too bad I didn't film the flight or anything - I could've started then and there, but then again I don't want trouble with Chinese police! But overall the flight was pretty good, but nothing too much different from a similar Etiahd flight I reviewed later in the trip (though on the 787-10 instead of the -9 (the -9 has remote controls and the -10 does not)). But still a crazy experience!!! ---------------- It turns out the men are adjacent to the Hong Kong mafia and are made to go onto these flights and steal valuables - it is also a repeated thing (has happened something like 5 times already!), and on this route aswell, which is a little worrying! there is a really detailed article about this incident on Simple flying, go check that out for more!"
+  text: "I was heavily debating not including this review as it was not filmed for YouTube, but it was one of the most eventful flights of my life. So this was meant to just be a normal flight from Abu Dhabi to Hong Kong, the usual Etihad experience, with a great seat (including cool remote controls - I made a YT short about that). But when we arrived into Hong Kong and got to the gate, we were told to sit down and check our valuables if anything had been STOLEN! WE WERE WAITING FOR THE POLICE!!! It turns out that a group of coordinated asian men had stolen a diamond necklace and diamond ring from a passenger who I only assume had brought it to Hong Kong to get good luck? Anyway, the police boarded our aircraft and started going to specific rows where those men had sat, they then proceeded to rip apart the seats, tearing of the seat cushions and pointing flashlights down the ridges. After about half an hour of this and a few men being escorted off the plane with luggage to be searched in a seperate jet bridge, we were let off the plane. What a crazy experience, too bad I didn't film the flight or anything - I could've started then and there, but then again I don't want trouble with Chinese police! But overall the flight was pretty good, but nothing too much different from a similar Etiahd flight I reviewed later in the trip (though on the 787-10 instead of the -9 (the -9 has remote controls and the -10 does not)). But still a crazy experience!!! ---------------- It turns out the men are adjacent to the Hong Kong mafia and are made to go onto these flights and steal valuables - it is also a repeated thing (has happened something like 5 times already!), and on this route aswell, which is a little worrying! there is a really detailed article about this incident on Simple flying, go check that out for more!"
 },
-    {
+  {
   airline: "Etihad",
   flight: "EY58 BRU → AUH",
   date: "December 2025",

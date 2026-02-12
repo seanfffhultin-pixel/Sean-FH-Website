@@ -15,6 +15,18 @@ export default function LatestUploadsWithThumbnails() {
       id: "WNAmr-5lGGk",
       title: "Ethiopian Airlines SAVED ME! (And They are AMAZING!)",
     },
+    {
+      id: "AICcfhtgT90",
+      title: "You Should Try THIS Thai Sleeper Train!",
+    },
+    {
+      id: "KaTbTOHbTaM",
+      title: "My STRANGE Rwandair Economy Experience...",
+    },
+    {
+      id: "7xaK10g-uXM",
+      title: "Why Flying THAI AIRASIA is GREAT?!",
+    },
   ];
 
   return (
