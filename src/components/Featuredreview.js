@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "n_o-uCUZOBQ",
-    title: "The Reality of THAI AIRWAYS DOMESTIC...",
+    id: "bY2J-BaVT4w",
+    title: "This SOUTH AFRICAN Airline SURPRISED ME! (From LANSERIA!)",
     description:
-      "This is what Thai Airways looks like when you fly domestically. From former Thai Smile Aircraft to surprise Snack boxes, does this really live up to the Thai Airways Premium Standard?",
-    thumbnail: "https://i.postimg.cc/1RJg7djt/Thai-domestic-5.png",
+      "Is this airline much better than RYANAIR? I recently flew from Johannesburg's Lanseria Airport to Durban with FlySafair, and I was very mnuch surprised, not only was everything a step up from Ryanair but it was also 100x more organaised - which is so much better!",
+    thumbnail: "https://i.postimg.cc/GtS8hYpB/FLYSAFAIR-3.png",
   };
 
   return (

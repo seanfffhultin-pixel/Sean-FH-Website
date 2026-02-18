@@ -65,6 +65,7 @@ export default function Navbar() {
           <li><Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>Home</Link></li>
           <li><Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>About</Link></li>
           <li><Link to="/reviews" className="nav-link" onClick={() => setMenuOpen(false)}>Reviews</Link></li>
+          <li><Link to="/gallery" className="nav-link" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
         </ul>
 
       </div>

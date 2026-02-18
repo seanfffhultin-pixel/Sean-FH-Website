@@ -4,6 +4,10 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "n_o-uCUZOBQ",
+      title: "The Reality of THAI AIRWAYS DOMESTIC...",
+    },
+    {
       id: "Aa03AJwh9f8",
       title: "LONG-HAUL On Asia's UNDERDOG! (Does It Live Up To The Rest?)",
     },
@@ -22,10 +26,6 @@ export default function LatestUploadsWithThumbnails() {
     {
       id: "KaTbTOHbTaM",
       title: "My STRANGE Rwandair Economy Experience...",
-    },
-    {
-      id: "7xaK10g-uXM",
-      title: "Why Flying THAI AIRASIA is GREAT?!",
     },
   ];
 

@@ -1,6 +1,6 @@
 import React from "react";
 import TopLists from "../components/Toplists";
-import Gallery from "../components/Gallery";
+/* import Gallery from "../components/Gallery"; */
 import AirlineCarousel from "../components/AirlineCarousel";
 import AircraftCarousel from "../components/AircraftCarousel";
 
@@ -100,7 +100,7 @@ export default function About() {
       
       
 
-      <Gallery />
+      
 
       
     </section>
