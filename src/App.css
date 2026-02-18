@@ -345,6 +345,8 @@ body {
 
     transform: translateY(-12px);
 
+    pointer-events: none;
+
     transition:
       opacity 0.25s ease,
       max-height 0.35s ease,
@@ -356,6 +358,7 @@ body {
     opacity: 1;
     max-height: 350px;
     transform: translateY(0);
+    pointer-events: auto;
   }
 
   /* Mobile links */
