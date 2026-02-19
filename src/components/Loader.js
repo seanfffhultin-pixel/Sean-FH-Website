@@ -5,8 +5,8 @@ export default function Loader() {
     <div className="loader-page">
       <div className="loader-content">
 
-        <h1 className="loader-logo">Sean FH</h1>
-        <p className="loader-sub">Preparing for takeoff ✈️</p>
+        <h1 className="loader-logo">seanfh.com</h1>
+        <p className="loader-sub"></p>
 
         <div className="flight-line">
           <span></span>

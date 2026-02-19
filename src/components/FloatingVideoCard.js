@@ -14,15 +14,17 @@ const videos = [
   {
     title: "The Reality of THAI AIRWAYS DOMESTIC...",
     url: "https://www.youtube.com/embed/n_o-uCUZOBQ"
+  },
+  {
+    title: "Is FlySafair Just Another RYANAIR? (From LANSERIA!)",
+    url: "https://www.youtube.com/embed/bY2J-BaVT4w"
   }
 ];
 
 export default function FloatingVideo() {
   const [index, setIndex] = useState(0);
   const [isWatching, setIsWatching] = useState(false);
-  const [isClosed, setIsClosed] = useState(
-    localStorage.getItem("videoClosed") === "true"
-  );
+  const [isClosed, setIsClosed] = useState(false); // ← no localStorage
 
   const intervalRef = useRef(null);
 
@@ -37,8 +39,7 @@ export default function FloatingVideo() {
   }, [isWatching, isClosed]);
 
   const closeVideo = () => {
-    setIsClosed(true);
-    localStorage.setItem("videoClosed", "true");
+    setIsClosed(true); // ← only closes for this session
     clearInterval(intervalRef.current);
   };
 

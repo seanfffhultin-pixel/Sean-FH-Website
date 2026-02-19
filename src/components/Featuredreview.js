@@ -6,7 +6,7 @@ export default function FeaturedReview() {
 
   const featured = {
     id: "bY2J-BaVT4w",
-    title: "This SOUTH AFRICAN Airline SURPRISED ME! (From LANSERIA!)",
+    title: "Is FlySafair Just Another RYANAIR? (From LANSERIA!)",
     description:
       "Is this airline much better than RYANAIR? I recently flew from Johannesburg's Lanseria Airport to Durban with FlySafair, and I was very mnuch surprised, not only was everything a step up from Ryanair but it was also 100x more organaised - which is so much better!",
     thumbnail: "https://i.postimg.cc/GtS8hYpB/FLYSAFAIR-3.png",
