@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 
 const airlines = [
-  "https://i.postimg.cc/yxjTYnRD/logo-cathay-pacific.png",
+  "https://i.postimg.cc/kGwCQW0g/Cathay-Pacific-Logo.png",
   "https://i.postimg.cc/tJGBsBQR/Bangkok-Airways-Logo-svg.png",
   "https://i.postimg.cc/90yNbvtq/Indi-Go-Airlines-logo-svg.png",
   "https://i.postimg.cc/9fktsJJk/Fly-Safair-Logo-Transparent-Background.png",

@@ -4,7 +4,6 @@ import React from "react";
 export default function Gallery() {
   const photos = [
     "https://i.postimg.cc/pL2Wbh0Y/IMG-4618.jpg",
-    "https://i.postimg.cc/bYtNQjDf/IMG-4617.jpg",
     "https://i.postimg.cc/25QVFRXW/IMG-4615.jpg",
     "https://i.postimg.cc/vmHpX50f/IMG-3750.jpg",
     "https://i.postimg.cc/q70Fq2ff/IMG-4614.jpg",
@@ -21,7 +20,6 @@ export default function Gallery() {
     "https://i.postimg.cc/bvYPQYxh/IMG-1140.jpg",
     "https://i.postimg.cc/9MrjnxgK/IMG-3419.jpg",
     "https://i.postimg.cc/J0XC1sL6/IMG-0775.jpg",
-    "https://i.postimg.cc/VLycKW9c/IMG-0116.jpg",
     "https://i.postimg.cc/5trr6fnN/IMG-0466.jpg"
   ];
 
