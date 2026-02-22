@@ -1,21 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 export default function Hero() {
+  const [videoFailed, setVideoFailed] = useState(false);
+
   return (
     <section className="hero">
-      <video
-        className="hero-video"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-      </video>
-
-      
+      {!videoFailed && (
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          onError={() => setVideoFailed(true)}
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+      )}
+      {videoFailed && (
+        <img
+          className="hero-fallback"
+          src="https://i.postimg.cc/QCcScgVB/IMG-4619.jpg"
+          alt="Hero background"
+        />
+      )}
 
       <div className="hero-content">
         <img 

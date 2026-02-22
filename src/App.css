@@ -481,7 +481,7 @@ body {
   border-bottom: 2px solid #ddd;
 }
 
-.hero-image {
+.hero-fallback {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -489,7 +489,7 @@ body {
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.hero-image:hover {
+.hero-fallback:hover {
   transform: scale(1.05);
   filter: brightness(70%);
 }
@@ -501,6 +501,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
 
 .hero-overlay {
   position: relative;
