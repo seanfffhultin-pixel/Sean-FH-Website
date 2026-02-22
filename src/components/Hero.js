@@ -5,12 +5,15 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <section className="hero">
-      <img 
-        src="https://i.postimg.cc/YCrpLHrJ/IMG-4619.jpg" 
-        alt="Header Banner" 
-        className="hero-image"
-        style={{ filter: "blur(5px) brightness(0.7)" }} // blur + darken
-      />
+      <video
+        className="hero-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source src="/videos/hero.mp4" type="video/mp4" />
+      </video>
 
       
 
@@ -21,11 +24,20 @@ export default function Hero() {
           className="profile-pic"
           
         />
+      
 
-        <div className="hero-welcome">
-          <h2>Welcome to Sean FH Travels</h2>
+        <div className="hero-welcome-1">
+          <h2>Welcome to</h2>
         </div>
-        <p>Flight reviews, aviation stories, and more!</p>
+
+        <div className="hero-welcome-2">
+          <h2>Sean FH Travels</h2>
+        </div>
+
+        <div className="hero-sub">
+          <h2>Flight reviews, aviation stories, and more!</h2>
+        </div>
+          
 
         <div className="hero-buttons">
 
