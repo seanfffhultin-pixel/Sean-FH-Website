@@ -1,14 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
 export default function Hero() {
   const [videoFailed, setVideoFailed] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (videoRef.current && videoRef.current.paused) {
+        setVideoFailed(true);
+      }
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="hero">
       {!videoFailed && (
         <video
+          ref={videoRef}
           className="hero-video"
           autoPlay
           muted
