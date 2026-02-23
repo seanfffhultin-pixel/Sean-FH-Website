@@ -32,7 +32,7 @@ export default function Privacy() {
 
             <section>
                 <h2>6. Contact Us</h2>
-                <p>If you have questions about this privacy policy, please contact us at your-email@example.com</p>
+                <p>If you have questions about this privacy policy, please contact us at seanfh@proton.me</p>
             </section>
         </div>
     );
