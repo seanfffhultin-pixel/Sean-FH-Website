@@ -4,11 +4,11 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 export default function TopAirlines() {
 
   const airlines = useMemo(() => [
-    { name: "1. Singapore Airlines", img: "https://i.postimg.cc/KzzMxmX9/IMG-0775.jpg" },
-    { name: "2. Etihad Airways", img: "https://i.postimg.cc/JnHGgBTS/IMG-4610.jpg" },
-    { name: "3. Turkish Airlines", img: "https://i.postimg.cc/9fXpw55x/IMG-1674.jpg" },
-    { name: "4. Cathay Pacific", img: "https://i.postimg.cc/nLk8Z0Pk/IMG-4611.jpg" },
-    { name: "5. Thai Airways", img: "https://i.postimg.cc/qM8XmMpb/IMG-0403.jpg" },
+    { name: "1. Singapore Airlines", img: "/images/IMG_0775.jpeg", /* Singapore 737*/ },
+    { name: "2. Etihad Airways", img: "/images/IMG_4610.jpeg", /* Etihad 787*/ },
+    { name: "3. Turkish Airlines", img: "/images/IMG_1129.jpeg", /* Turkish A350*/ },
+    { name: "4. Cathay Pacific", img: "/images/IMG_4619.jpeg", /* Cathay A330*/ },
+    { name: "5. Thai Airways", img: "/images/IMG_0403.jpeg", /* Thai Airways A350*/ },
   ], []);
 
 

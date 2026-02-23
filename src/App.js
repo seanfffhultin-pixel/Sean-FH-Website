@@ -11,6 +11,7 @@ import Loader from "./components/Loader";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
+import Privacy from "./pages/Privacy";
 
 
 function AnimatedRoutes() {
@@ -75,6 +76,20 @@ function AnimatedRoutes() {
           }
         />
 
+
+        <Route
+          path="/privacy"
+          element={
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <Privacy />
+            </motion.div>
+          }
+        />
 
 
         

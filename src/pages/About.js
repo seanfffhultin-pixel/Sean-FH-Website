@@ -12,7 +12,7 @@ export default function About() {
       {/* Block 1: Aviation Passion */}
       <div className="about-block">
         <img
-          src="https://i.postimg.cc/mD5vNQN7/IMG-3689.jpg"
+          src="/images/IMG_3689.JPG"
           alt="Plane Window"
           className="about-img"
         />
@@ -39,7 +39,7 @@ export default function About() {
       {/* Block 2: Channel Story */}
       <div className="about-block reverse">
         <img
-          src="https://i.postimg.cc/1tb95xdH/46C8BA13-A5BE-4267-ABCF-BA129F271CF2.jpg"
+          src="/images/46C8BA13-A5BE-4267-ABCF-BA129F271CF2.jpeg"
           alt="Traveling"
           className="about-img"
         />
@@ -62,7 +62,7 @@ export default function About() {
       {/* Block 3: Future Goals */}
       <div className="about-block">
         <img
-          src="https://i.postimg.cc/VkJ5ZGpH/IMG-4081.jpg"
+          src="/images/IMG_4081.jpeg"
           alt="Runway"
           className="about-img"
         />

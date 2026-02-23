@@ -608,6 +608,45 @@ body {
   flex-wrap: wrap;
 }
 
+/* ---------------------- */
+/* GALLERY: reduce layout shift */
+/* ---------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.gallery-item {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* reserve consistent box to avoid jumps */
+  overflow: hidden;
+  background: #f3f3f3; /* neutral placeholder color */
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  filter: blur(8px) grayscale(8%);
+  transition: filter 450ms ease, transform 450ms ease;
+}
+
+.gallery-item img.loaded {
+  filter: none;
+  transform: scale(1);
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+}
+
 .btn {
   padding: 12px 24px;
   border-radius: 30px;
@@ -1519,37 +1558,55 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* ============================= */
+/* Premium Minimal Footer        */
+/* ============================= */
+
 /* ---------------------- */
-/* FOOTER */
+/* Footer */
 /* ---------------------- */
 
 .footer {
-  background-color: #cacaca; /* black background */
-  color: #3a3a3a;            /* white text */
-  padding: 25px 20px;
-  font-size: 15.5px;
-  text-align: center;
-  border-top: 2.5px solid;
-  border-image: linear-gradient(to right, #ff5fa2, #8e4fd6) 1;
+  position: relative;
+  background: #929292; /* darker grey */
+  color: #e5e5e5;
+  padding: 12px 20px; /* SMALL */
+  overflow: hidden;
+  font-size: 0.85rem;
+  margin-top: 30px;
 }
 
 .footer-content {
+  position: relative;
+  z-index: 2;
   display: flex;
-  justify-content: center;   /* center horizontally */
-  gap: 20px;                 /* space between the two texts */
-  flex-wrap: wrap;           /* wrap on small screens */
-}
-
-.footer-content span {
-  transition: color 0.3s ease;
-}
-
-.footer-content span:hover {
-  color: #e63946; /* red on hover */
+  justify-content: space-between;
+  align-items: center;
 }
 
 
 
+.footer-link {
+  color: #e5e5e5;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+/* Massive subtle logo */
+.footer-logo {
+  position: absolute;
+  bottom: -74px;   /* pushes most of it out */
+  left: 150px;    /* only a bit visible */
+  width: 200px;    /* MASSIVE */
+  opacity: 0.5;   /* super washed out */
+  filter: grayscale(50%);
+  pointer-events: none;
+  z-index: 1;
+}
 
 
 
@@ -1567,13 +1624,14 @@ body {
   max-width: 1100px;
   margin: 120px auto 80px auto;
   padding: 0 20px;
+  margin-bottom: 80px;
 }
 
 .about-title {
   text-align: center;
   font-size: 42px;
   font-weight: 800;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   color: #2d2d2d;
 }
 
@@ -2005,11 +2063,12 @@ body {
   max-width: 1100px;
   margin: 120px auto 80px auto;
   padding: 0 20px;
+  margin-bottom: 80px;
 }
 
 .reviews-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 /* Title row */
@@ -2190,6 +2249,7 @@ body {
   max-width: 1100px;
   margin: 120px auto 80px auto;
   padding: 0 20px;
+  margin-bottom: 80px;
 }
 
 /* Header */
@@ -2298,5 +2358,72 @@ body {
 
   .gallery-item {
     border-radius: 16px;
+  }
+}
+
+
+/* -------------------------------------------------- */
+/* Privacy PAGE */
+/* -------------------------------------------------- */
+
+/* PRIVACY PAGE STYLES */
+.privacy-policy {
+  max-width: 800px;
+  margin: 120px auto 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+  transition: 
+    transform 0.55s cubic-bezier(.22,.68,0,1.71),
+    box-shadow 0.35s ease;
+  margin-bottom: 80px;
+}
+
+.privacy-policy:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+
+}
+
+.privacy-policy h1 {
+  font-size: 2.5rem;
+  color: #2d2d2d;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e14c4c;
+  padding-bottom: 10px;
+}
+
+.privacy-policy section {
+  margin-bottom: 30px;
+}
+
+.privacy-policy h2 {
+  font-size: 1.5rem;
+  color: #e14c4c;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.privacy-policy p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .privacy-policy {
+    margin: 100px 20px 40px;
+    padding: 20px;
+  }
+
+  .privacy-policy h1 {
+    font-size: 2rem;
+  }
+
+  .privacy-policy h2 {
+    font-size: 1.3rem;
   }
 }
