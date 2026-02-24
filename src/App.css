@@ -1568,12 +1568,29 @@ body {
 
 .footer {
   position: relative;
-  background: #929292; /* darker grey */
-  color: #e5e5e5;
+  background: 
+    radial-gradient(circle at 50% 80%, #e7f4ff 0%, transparent 45%), /* darker grey */
+    radial-gradient(circle at 0% 80%, #a0a0a0 0%, transparent 55%),
+    radial-gradient(circle at 100% 80%, #a0a0a0 0%, transparent 55%);
+  color: #606060;
   padding: 12px 20px; /* SMALL */
   overflow: hidden;
   font-size: 0.85rem;
   margin-top: 30px;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background:
+    radial-gradient(circle at 50% 80%, #e7f4ff 0%, transparent 100%), /* darker grey */
+    radial-gradient(circle at 0% 80%, #808080 0%, transparent 55%),
+    radial-gradient(circle at 100% 80%, #808080 0%, transparent 55%);
+  border-radius: 10px;
 }
 
 .footer-content {
@@ -1587,7 +1604,7 @@ body {
 
 
 .footer-link {
-  color: #e5e5e5;
+  color: #606060;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -1602,8 +1619,8 @@ body {
   bottom: -74px;   /* pushes most of it out */
   left: 150px;    /* only a bit visible */
   width: 200px;    /* MASSIVE */
-  opacity: 0.5;   /* super washed out */
-  filter: grayscale(50%);
+  opacity: 0.4;   /* super washed out */
+  filter: grayscale(40%);
   pointer-events: none;
   z-index: 1;
 }
