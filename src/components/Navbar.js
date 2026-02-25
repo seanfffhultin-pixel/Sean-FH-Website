@@ -62,11 +62,42 @@ export default function Navbar() {
         </div>
 
         <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
-          <li><Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>About</Link></li>
-          <li><Link to="/reviews" className="nav-link" onClick={() => setMenuOpen(false)}>Reviews</Link></li>
-          <li><Link to="/gallery" className="nav-link" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
+          <li>
+            <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/reviews" className="nav-link" onClick={() => setMenuOpen(false)}>
+              Reviews
+            </Link>
+          </li>
+          <li>
+            <Link to="/gallery" className="nav-link" onClick={() => setMenuOpen(false)}>
+              Gallery
+            </Link>
+          </li>
+
+          <div className="nav-socials">
+            <a href="https://youtube.com/@seanfhtravels" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/seanfhtravels" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://tiktok.com/@seanfh" target="_blank" rel="noreferrer">
+              <i className="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
         </ul>
+
+
+        
 
       </div>
 

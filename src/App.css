@@ -211,24 +211,45 @@ body {
   font-size: 1.05rem;
   font-weight: 500;
   color: #8e4fd6;
-  padding: 0.5rem 1rem;
-  transition: background 0.2s, color 0.2s;
-}
-
-.nav-link {
   padding: 8px 14px;
-  border-radius: 999px; /* fully rounded pill */
+  border-radius: 999px;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
 .nav-link:hover {
-  background: rgba(139, 92, 246, 0.12); /* subtle purple highlight */
+  background: rgba(139, 92, 246, 0.12);
+  color: #e14c4c;
 }
 
+.nav-socials {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 12px;
+}
 
-.nav-link:hover {
-  background: rgba(0,0,0,0.05);
-  color: #ff4949;
+.nav-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  
+  color: #8e4fd6;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-socials a:hover {
+  background: rgba(139, 92, 246, 0.12);
+  color: #e14c4c;
+}
+
+.nav-socials i {
+  font-size: 16px;
 }
 
 /* ---------------------- */
@@ -291,6 +312,14 @@ body {
   gap: 6px;
   position: relative;
   left: -30px; /* Shift left so it fits on iPhones */
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(142, 79, 214, 0.1);
+  transition: background 0.3s ease;
+}
+
+.hamburger:hover {
+  background: rgba(142, 79, 214, 0.2);
 }
 
 .hamburger span {
@@ -319,7 +348,8 @@ body {
 /* CLEAN MOBILE NAVBAR */
 /* ---------------------- */
 
-@media (max-width: 1200px) {
+
+@media (max-width: 1600px) {
 
   /* Mobile menu panel */
   .nav-menu {
@@ -388,8 +418,6 @@ body {
     background: linear-gradient(135deg, rgba(142, 79, 214, 0.05) 0%, rgba(142, 79, 214, 0.02) 100%);
     border-color: rgba(142, 79, 214, 0.2);
     color: #8e4fd6;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(142, 79, 214, 0.15);
   }
 
   .nav-link:hover::before {
@@ -398,7 +426,25 @@ body {
 
   .nav-link:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(142, 79, 214, 0.1);
+  }
+
+  /* Mobile socials */
+  .nav-socials {
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(142, 79, 214, 0.1);
+  }
+
+  .nav-socials a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-socials i {
+    font-size: 18px;
   }
 
   /* Hamburger button modern look */
@@ -986,7 +1032,8 @@ body {
   width: 100%;
   display: block;
   object-fit: cover;
-  height: 178px;
+  
+  aspect-ratio: 16 / 9;
 }
 
 .video-title {
@@ -1002,7 +1049,8 @@ body {
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .video-frame {
-    height: 160px;
+    
+    aspect-ratio: 16 / 9;
   }
 
   .video-title {
@@ -2269,6 +2317,13 @@ body {
   margin-bottom: 80px;
 }
 
+.gallery-section {
+  max-width: 1100px;
+  margin: 120px auto 80px auto;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
 /* Header */
 .gallery-header {
   text-align: center;
@@ -2366,6 +2421,10 @@ body {
 
 @media (max-width: 480px) {
   .gallery-page {
+    margin-top: 120px;
+  }
+
+  .gallery-section {
     margin-top: 120px;
   }
 

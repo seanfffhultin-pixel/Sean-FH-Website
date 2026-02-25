@@ -121,7 +121,7 @@ export default function Gallery() {
   }, []); // photos is module-level so effect can remain empty
 
   return (
-    <div className="gallery-page">
+    <div className="gallery-section">
       <div className="gallery-header">
         <h1 className="gallery-title">Photo Gallery</h1>
         <p className="gallery-subtitle">
