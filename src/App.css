@@ -204,6 +204,7 @@ body {
   display: flex;
   gap: 30px;
   list-style: none;
+  align-items: center; 
 }
 
 .nav-link {
@@ -222,12 +223,14 @@ body {
 }
 
 .nav-socials {
-  position: absolute;
-  right: 100px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: static;   /* remove absolute */
+  transform: none;    /* remove translate */
   display: flex;
   gap: 12px;
+  align-items: center;
+  top: 50%;
+  margin-left: 30px;
+  
 }
 
 .nav-socials a {
@@ -250,6 +253,13 @@ body {
 
 .nav-socials i {
   font-size: 16px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  line-height: 1;
 }
 
 /* ---------------------- */
@@ -349,8 +359,9 @@ body {
 /* ---------------------- */
 
 
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
 
+  
   /* Mobile menu panel */
   .nav-menu {
     position: fixed;
@@ -426,6 +437,10 @@ body {
 
   .nav-link:active {
     transform: translateY(0);
+  }
+
+  .nav-menu li {
+  width: 100%;
   }
 
   /* Mobile socials */

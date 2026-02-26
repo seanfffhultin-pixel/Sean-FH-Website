@@ -62,6 +62,7 @@ export default function Navbar() {
         </div>
 
         <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
+          
           <li>
             <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
               Home
@@ -82,6 +83,7 @@ export default function Navbar() {
               Gallery
             </Link>
           </li>
+          
 
           <div className="nav-socials">
             <a href="https://youtube.com/@seanfhtravels" target="_blank" rel="noreferrer">
