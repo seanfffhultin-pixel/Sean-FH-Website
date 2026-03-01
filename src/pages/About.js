@@ -5,8 +5,10 @@ import AirlineCarousel from "../components/AirlineCarousel";
 import AircraftCarousel from "../components/AircraftCarousel";
 
 export default function About() {
+
   return (
     <section id="About" className="about-section">
+
       <h2 className="about-title">My Story</h2>
 
       {/* Block 1: Aviation Passion */}
@@ -87,22 +89,9 @@ export default function About() {
       </div>
 
       {/* ✨ New Sections */}
-      
       <AirlineCarousel />
-
-      
-      
       <TopLists />
-
-
-
       <AircraftCarousel />
-      
-      
-
-      
-
-      
     </section>
   );
 }

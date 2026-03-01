@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";   // <-- FIXED
 
-import Hero from "../components/Hero"; 
+import Hero from "../components/HomeHero"; 
 import FloatingVideoCard from "../components/FloatingVideoCard";
 import Latestuploads from "../components/Latestuploads";
 import Gallery from "../components/Gallery";

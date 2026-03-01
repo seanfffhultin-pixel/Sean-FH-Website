@@ -16,11 +16,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="home-hero">
       {!videoFailed && (
         <video
           ref={videoRef}
-          className="hero-video"
+          className="home-hero-video"
           autoPlay
           muted
           loop
@@ -32,13 +32,13 @@ export default function Hero() {
       )}
       {videoFailed && (
         <img
-          className="hero-fallback"
+          className="home-hero-fallback"
           src="/images/IMG_4619.jpeg"
           alt="Hero background"
         />
       )}
 
-      <div className="hero-content">
+      <div className="home-hero-content">
         <img 
           src="https://i.postimg.cc/ncft3LHK/IMG-2168.jpg"
           alt="Profile"
@@ -47,20 +47,20 @@ export default function Hero() {
         />
       
 
-        <div className="hero-welcome-1">
+        <div className="home-hero-welcome-1">
           <h2>Welcome to</h2>
         </div>
 
-        <div className="hero-welcome-2">
+        <div className="home-hero-welcome-2">
           <h2>Sean FH Travels</h2>
         </div>
 
-        <div className="hero-sub">
+        <div className="home-hero-sub">
           <h2>Flight reviews, aviation stories, and more!</h2>
         </div>
           
 
-        <div className="hero-buttons">
+        <div className="home-hero-buttons">
 
           <Link to="/about" className="btn">
             Learn More

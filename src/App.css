@@ -163,7 +163,7 @@ body {
   top: 0;
   z-index: 999;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   overflow: visible;
 
 }
@@ -527,9 +527,6 @@ body {
 
 
 
-
-
-
 /* -------------------------------------------------- */
 /* HOME PAGE */
 /* -------------------------------------------------- */
@@ -537,7 +534,7 @@ body {
 /* ---------------------- */
 /* HERO SECTION */
 /* ---------------------- */
-.hero {
+.home-hero {
   position: relative;
   width: 100%;
   height: 730px; /* taller for impact */
@@ -545,7 +542,7 @@ body {
   border-bottom: 2px solid #ddd;
 }
 
-.hero-fallback {
+.home-hero-fallback {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -554,13 +551,13 @@ body {
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-.hero-fallback:hover {
+.home-hero-fallback:hover {
   transform: scale(1.05);
   filter: brightness(70%);
 }
 
 
-.hero-video {
+.home-hero-video {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -568,7 +565,7 @@ body {
 }
 
 
-.hero-overlay {
+.home-hero-overlay {
   position: relative;
   z-index: 2;
   height: 100%;
@@ -581,16 +578,9 @@ body {
   padding: 0 20px;
 }
 
-.home-hero::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60%;
-  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
-}
 
-.hero-content {
+
+.home-hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -617,21 +607,21 @@ body {
   transform: scale(1.05);
 }
 
-.hero-welcome-1 h2 {
+.home-hero-welcome-1 h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0px;
   text-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-.hero-welcome-2 h2 {
+.home-hero-welcome-2 h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 15px;
   text-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
-.hero-sub h2 {
+.home-hero-sub h2 {
   font-size: 0.9rem;
   font-weight: 500;
   color: #fff;
@@ -639,15 +629,15 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .hero-welcome-1 h2 {
+  .home-hero-welcome-1 h2 {
     font-size: 3.5rem;
   }
 
-  .hero-welcome-2 h2 {
+  .home-hero-welcome-2 h2 {
     font-size: 5rem;
   }
 
-  .hero-sub h2 {
+  .home-hero-sub h2 {
     font-size: 1.2rem;
   }
 
@@ -656,7 +646,7 @@ body {
     height: 170px;
   }
 
-  .hero {
+  .home-hero {
     height: 800px; /* slightly larger on desktop */
   }
 }
@@ -664,7 +654,7 @@ body {
 /* ---------------------- */
 /* HERO BUTTONS */
 /* ---------------------- */
-.hero-buttons {
+.home-hero-buttons {
   margin-top: 20px;
   display: flex;
   justify-content: center;
@@ -853,7 +843,7 @@ body {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
   transition: 
     transform 0.35s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -869,6 +859,7 @@ body {
 
 .about-me-img:hover {
   transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
 }
 
 .about-me-text {
@@ -922,7 +913,7 @@ body {
   margin: auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
   background: #fff;
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
@@ -1034,7 +1025,7 @@ body {
   border-radius: 15px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -1092,7 +1083,7 @@ body {
   text-align: center;
   background: #ffffff;
   border-radius: 25px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -1100,7 +1091,7 @@ body {
 
 .podcast-section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.15);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25);
 }
 
 .podcast-title {
@@ -1298,7 +1289,7 @@ body {
   background: #fff;
   border-radius: 16px;
   padding: 20px 22px;   /* slightly slimmer */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* softer shadow */
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28); /* softer shadow */
   border: 1px solid rgba(0,0,0,0.05);     /* thin premium border */
   width: 100%;
   max-width: 500px;
@@ -1307,7 +1298,7 @@ body {
 
 
 
-  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1321,7 +1312,7 @@ body {
 .carousel-section:hover,
 .airline-carousel-section:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
 }
 
 
@@ -1574,12 +1565,13 @@ body {
     box-shadow 0.35s ease;
   cursor: pointer;
   text-decoration: none;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
 }
 
 /* Hover effect */
 .social-btn:hover {
   transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 /* Instagram */
@@ -1708,6 +1700,7 @@ body {
   margin: 120px auto 80px auto;
   padding: 0 20px;
   margin-bottom: 80px;
+  margin-top: 140px;
 }
 
 .about-title {
@@ -1716,6 +1709,7 @@ body {
   font-weight: 800;
   margin-bottom: 60px;
   color: #2d2d2d;
+  
 }
 
 .about-block {
@@ -1726,15 +1720,17 @@ body {
   padding: 20px;
   border-radius: 12px;
   background-color: #fdfdfd;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
+  
 }
+
 
 .about-block:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 .about-block.reverse {
@@ -1805,6 +1801,8 @@ body {
   width: 100%;
   max-width: 850px;
 }
+
+
 
 .aircraft-carousel-section:hover {
   transform: translateY(-5px);
@@ -2147,6 +2145,7 @@ body {
   margin: 120px auto 80px auto;
   padding: 0 20px;
   margin-bottom: 80px;
+  margin-top: 140px;
 }
 
 .reviews-header {
@@ -2196,7 +2195,7 @@ body {
 .review-card {
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
   padding: 30px;
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
@@ -2205,7 +2204,7 @@ body {
 
 .review-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.25);
 }
 
 /* CONTENT */
@@ -2333,6 +2332,7 @@ body {
   margin: 120px auto 80px auto;
   padding: 0 20px;
   margin-bottom: 80px;
+  margin-top: 140px;
 }
 
 .gallery-section {
@@ -2383,7 +2383,7 @@ body {
   background: #f5f5f5;
   cursor: pointer;
 
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -2402,7 +2402,7 @@ body {
 /* Hover Effect */
 .gallery-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-item:hover img {
@@ -2467,17 +2467,18 @@ body {
   padding: 30px;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
   line-height: 1.6;
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
   margin-bottom: 80px;
+  margin-top: 140px;
 }
 
 .privacy-policy:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.25);
 
 }
 
