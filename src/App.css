@@ -760,7 +760,7 @@ body {
 /* ✨ HOVER EFFECT */
 .floating-video:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
 }
 
 /* Close button */
@@ -859,7 +859,7 @@ body {
 
 .about-me-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.35);
 }
 
 .about-me-text {
@@ -913,7 +913,7 @@ body {
   margin: auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
   background: #fff;
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
@@ -922,7 +922,7 @@ body {
 
 .featured-card:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.28);
 }
 
 .featured-thumbnail {
@@ -1025,7 +1025,7 @@ body {
   border-radius: 15px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -1034,7 +1034,7 @@ body {
 
 .video-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
 }
 
 .video-frame {
@@ -1083,7 +1083,7 @@ body {
   text-align: center;
   background: #ffffff;
   border-radius: 25px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -1091,7 +1091,7 @@ body {
 
 .podcast-section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
 }
 
 .podcast-title {
@@ -1289,7 +1289,7 @@ body {
   background: #fff;
   border-radius: 16px;
   padding: 20px 22px;   /* slightly slimmer */
-  box-shadow: 0 14px 28px rgba(0,0,0,0.28); /* softer shadow */
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15); /* softer shadow */
   border: 1px solid rgba(0,0,0,0.05);     /* thin premium border */
   width: 100%;
   max-width: 500px;
@@ -1312,7 +1312,7 @@ body {
 .carousel-section:hover,
 .airline-carousel-section:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.28);
 }
 
 
@@ -1565,13 +1565,13 @@ body {
     box-shadow 0.35s ease;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
 /* Hover effect */
 .social-btn:hover {
   transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.58);
 }
 
 /* Instagram */
@@ -1613,7 +1613,7 @@ body {
   align-items: center;
   font-size: 22px;
   background: white;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.40);
 }
 
 /* ============================= */
@@ -1720,7 +1720,7 @@ body {
   padding: 20px;
   border-radius: 12px;
   background-color: #fdfdfd;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -1730,7 +1730,7 @@ body {
 
 .about-block:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.28);
 }
 
 .about-block.reverse {
@@ -1749,6 +1749,7 @@ body {
 
 .about-img:hover {
   transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.28);
 }
 
 .about-text h3 {
@@ -1794,7 +1795,7 @@ body {
   background: #fff;
   border-radius: 18px;
   padding: 28px 30px 34px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -1806,7 +1807,7 @@ body {
 
 .aircraft-carousel-section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
 }
 
 /* ---------------------- */
@@ -1956,7 +1957,7 @@ body {
   background: #fff;
   border-radius: 18px;
   padding: 28px 30px 34px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -1967,7 +1968,7 @@ body {
 
 .airline-carousel-section:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
 }
 
 /* ---------------------- */
@@ -2195,7 +2196,7 @@ body {
 .review-card {
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
   padding: 30px;
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
@@ -2204,7 +2205,7 @@ body {
 
 .review-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.25);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.28);
 }
 
 /* CONTENT */
@@ -2289,6 +2290,7 @@ body {
 
 .review-gallery img:hover {
   transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.28);
 }
 
 /* MOBILE ADJUSTMENTS */
@@ -2383,7 +2385,7 @@ body {
   background: #f5f5f5;
   cursor: pointer;
 
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   transition: 
     transform 0.55s cubic-bezier(.22,.68,0,1.71),
     box-shadow 0.35s ease;
@@ -2402,7 +2404,7 @@ body {
 /* Hover Effect */
 .gallery-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.48);
 }
 
 .gallery-item:hover img {
