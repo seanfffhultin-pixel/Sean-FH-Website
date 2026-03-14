@@ -4,6 +4,10 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "bY2J-BaVT4w",
+      title: "Is FlySafair Just Another RYANAIR? (From LANSERIA!)",
+    },
+    {
       id: "n_o-uCUZOBQ",
       title: "The Reality of THAI AIRWAYS DOMESTIC...",
     },
@@ -22,10 +26,6 @@ export default function LatestUploadsWithThumbnails() {
     {
       id: "AICcfhtgT90",
       title: "You Should Try THIS Thai Sleeper Train!",
-    },
-    {
-      id: "KaTbTOHbTaM",
-      title: "My STRANGE Rwandair Economy Experience...",
     },
   ];
 

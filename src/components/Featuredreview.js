@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "bY2J-BaVT4w",
-    title: "Is FlySafair Just Another RYANAIR? (From LANSERIA!)",
+    id: "OW6BUq3LEG0",
+    title: "Is Bangkok Airways THE BEST REGIONAL AIRLINE? (Flying Phuket - Bangkok)",
     description:
-      "Is this airline much better than RYANAIR? I recently flew from Johannesburg's Lanseria Airport to Durban with FlySafair, and I was very mnuch surprised, not only was everything a step up from Ryanair but it was also 100x more organaised - which is so much better!",
-    thumbnail: "/images/FLYSAFAIR_3.png",
+      "SkyTrax awarded Bangkok Airways as the BEST REGIONAL AIRLINE in 2025, and after flying with them for the first time in a while, I can confidently say that they have definately earned that title! Flying from Phuket to Bangkok!",
+    thumbnail: "/images/FINAL 2.jpeg",
   };
 
   return (

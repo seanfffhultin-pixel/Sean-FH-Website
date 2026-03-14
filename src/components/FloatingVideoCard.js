@@ -4,6 +4,10 @@ import { useEffect, useState, useRef } from "react";
 
 const videos = [
   {
+    title: "Is Bangkok Airways THE BEST REGIONAL AIRLINE? (Flying Phuket - Bangkok)",
+    url: "https://www.youtube.com/embed/OW6BUq3LEG0"
+  },
+  {
     title: "LONG-HAUL On Asia's UNDERDOG! (Does It Live Up To The Rest?)",
     url: "https://www.youtube.com/embed/Aa03AJwh9f8"
   },

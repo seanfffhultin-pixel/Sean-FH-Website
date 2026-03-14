@@ -34,7 +34,7 @@ const airlines = [
   "images/Germanwing's_logo.jpg",
   "images/Nok_Air_Logo_og.png",
     "images/Thai_Airways_logo.svg.png",
-    "images/britishairways_21686125301575_thumb.jpg",
+    "images/British-Airways-Logo.png",
     "images/FR copy.png",
     "images/Flybe copy.svg.png",
     "images/Turkish_Airlines_logo_2019_compact.svg.png",

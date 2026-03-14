@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
 import Privacy from "./pages/Privacy";
+import ReviewPages from "./pages/Review-Pages"
 
 
 function AnimatedRoutes() {
@@ -91,7 +92,20 @@ function AnimatedRoutes() {
           }
         />
 
-
+        {/* Dynamic review pages */}
+        <Route 
+        path="/review-pages/:reviewId" 
+        element={
+          <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <ReviewPages />
+            </motion.div>
+          } 
+        />
         
 
       </Routes>
