@@ -1,24 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();
+  const prevPathRef = useRef(pathname);
 
   useEffect(() => {
-    // Scroll to top whenever the route changes
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const prevPath = prevPathRef.current;
+    const isReviewPage = (path) => path.startsWith("/review-pages/");
 
-    // Optional: listen for clicks on same-page links
-    const handleClick = (e) => {
-      const link = e.target.closest("a");
-      if (link && link.getAttribute("href") === pathname) {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+    if (prevPath !== pathname) {
+      if (isReviewPage(prevPath) || isReviewPage(pathname)) {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
       }
-    };
+    }
 
-    document.addEventListener("click", handleClick);
-
-    return () => document.removeEventListener("click", handleClick);
+    prevPathRef.current = pathname;
   }, [pathname]);
 
   return null;
