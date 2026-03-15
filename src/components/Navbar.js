@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showProgress, setShowProgress] = useState(false);
+  const menuRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -44,6 +46,32 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleOutsideClick = (event) => {
+      const menuEl = menuRef.current;
+      const hamburgerEl = hamburgerRef.current;
+
+      if (!menuEl || !hamburgerEl) return;
+
+      const clickedMenu = menuEl.contains(event.target);
+      const clickedHamburger = hamburgerEl.contains(event.target);
+
+      if (!clickedMenu && !clickedHamburger) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, [menuOpen]);
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -55,13 +83,17 @@ export default function Navbar() {
         <div
           className={`hamburger ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
+          ref={hamburgerRef}
         >
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        <ul className={`nav-menu ${menuOpen ? "open" : ""}`}>
+        <ul
+          className={`nav-menu ${menuOpen ? "open" : ""}`}
+          ref={menuRef}
+        >
           
           <li>
             <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
