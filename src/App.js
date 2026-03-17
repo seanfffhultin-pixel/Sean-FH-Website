@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import Gallery from "./pages/Gallery";
 import Privacy from "./pages/Privacy";
 import ReviewPages from "./pages/Review-Pages"
-import BackToTopButton from "./components/BackToTopButton";
+
 
 
 function AnimatedRoutes() {
@@ -135,7 +135,7 @@ function App() {
     <Router>
       <Navbar />
       <ScrollToTop />
-      <BackToTopButton />
+     
 
       <AnimatedRoutes />
 

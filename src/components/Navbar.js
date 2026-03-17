@@ -77,7 +77,7 @@ export default function Navbar() {
       <div className="nav-container">
 
         <Link to="/" className="nav-logo">
-          Sean FH
+          seanfh
         </Link>
 
         <div
