@@ -1684,8 +1684,8 @@ body {
   }
 
   .carousel-btn {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     font-size: 20px;
   }
 }
@@ -1710,11 +1710,11 @@ body {
 
 @media (max-width: 600px) {
   .carousel-btn-left {
-    left: 8px;
+    left: px;
   }
 
   .carousel-btn-right {
-    right: 8px;
+    right: px;
   }
 }
 
