@@ -17,8 +17,10 @@ export default function Home() {
       <Hero />
       <FloatingVideoCard />
       <About />
-      <Featuredreview />
-      <Latestuploads />
+      <section className="featured-latest-row">
+        <Featuredreview />
+        <Latestuploads />
+      </section>
       <Podcast />
       <TopLists />
       <Gallery />

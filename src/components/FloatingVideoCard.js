@@ -57,7 +57,7 @@ export default function FloatingVideo() {
       onTouchStart={() => setIsWatching(true)}
       onTouchEnd={() => setIsWatching(false)}
     >
-      <button className="close-btn" onClick={closeVideo}>×</button>
+      <button className="close-btn" onClick={closeVideo} aria-label="Close video"></button>
 
       <p>{videos[index].title}</p>
 

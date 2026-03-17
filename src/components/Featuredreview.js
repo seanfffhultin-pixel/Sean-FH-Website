@@ -14,7 +14,7 @@ export default function FeaturedReview() {
 
   return (
     <section id="featured-review" className="featured-review-section">
-      <h3>⭐ Featured Review of the Month (Latest Upload)</h3>
+      <h3>Latest Upload</h3>
 
       <div className="featured-card" onClick={() => setOpen(true)}>
         <img
