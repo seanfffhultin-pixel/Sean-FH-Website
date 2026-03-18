@@ -5,7 +5,11 @@ export default function Loader() {
     <div className="loader-page">
       <div className="loader-content">
 
-        <h1 className="loader-logo">seanfh.com</h1>
+        <img
+          src="/images/Seanfh NEW logo (modified).png"
+          alt="Sean FH Logo"
+          className="loader-logo-img"
+        />
         <p className="loader-sub"></p>
 
         <div className="flight-line">
