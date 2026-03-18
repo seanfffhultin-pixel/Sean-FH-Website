@@ -3,7 +3,7 @@ import React from "react";
 export default function Podcast() {
   return (
     <section id="podcast" className="podcast-wrapper">
-      <h2 className="podcast-title">🎧 AirAware — My Podcast</h2>
+      <h2 className="podcast-title">AirAware — My Podcast</h2>
 
       <p className="podcast-description">
         Listen to episodes of AirAware right here on the site!  

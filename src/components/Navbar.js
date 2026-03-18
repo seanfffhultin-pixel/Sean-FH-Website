@@ -6,13 +6,30 @@ export default function Navbar() {
   const [showProgress, setShowProgress] = useState(false);
   const menuRef = useRef(null);
   const hamburgerRef = useRef(null);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const onScroll = () => {
-      document.querySelector(".navbar")
-        .classList.toggle("scrolled", window.scrollY > 20);
+      const navbar = document.querySelector(".navbar");
+      if (!navbar) return;
+
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollY.current;
+      const showNavbar = currentScrollY <= 0 || !scrollingDown;
+      navbar.classList.toggle("nav-hidden", !showNavbar);
+
+      const atTop = window.scrollY <= 0;
+      navbar.classList.toggle("over-hero", atTop);
+      if (atTop) {
+        navbar.classList.remove("scrolled");
+      } else {
+        navbar.classList.toggle("scrolled", window.scrollY > 20);
+      }
+
+      lastScrollY.current = currentScrollY;
     };
 
+    onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -73,11 +90,16 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
+    <>
+      <nav className="navbar">
+        <div className="nav-container">
 
-        <Link to="/" className="nav-logo">
-          seanfh
+        <Link to="/" className="nav-logo" aria-label="Home">
+          <img
+            src="/images/Seanfh NEW logo (modified).png"
+            alt="Sean FH Logo"
+            className="nav-logo-img"
+          />
         </Link>
 
         <div
@@ -133,7 +155,8 @@ export default function Navbar() {
 
         
 
-      </div>
+        </div>
+      </nav>
 
       {/* Scroll Progress Bar */}
       <div
@@ -143,7 +166,6 @@ export default function Navbar() {
       >
         <div id="scroll-progress-fill"></div>
       </div>
-
-    </nav>
+    </>
   );
 }
