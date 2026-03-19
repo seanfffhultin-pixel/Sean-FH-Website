@@ -50,7 +50,7 @@ export default function TopAirports() {
   };
 
   return (
-    <section className="carousel-section">
+    <section className="carousel-section" id="top-airports-section">
 
       <h3 className="carousel-heading">
         Top 5 Airports

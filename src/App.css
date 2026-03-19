@@ -1290,6 +1290,12 @@ body {
   margin-bottom: 0px;
 }
 
+@media (max-width: 1024px){
+  .podcast-description {
+    margin-bottom: -40px;
+  }
+}
+
 .podcast-embeds {
   display: grid;
   gap: 24px;
@@ -1536,8 +1542,7 @@ body {
 
   background: var(--c-white);
   border-radius: 16px;
-  padding: 16px 18px 22px;
-  padding-top: 56px;
+  padding: 22px 20px 14px;
   box-shadow: var(--shadow-lg); /* softer shadow */
   border: 1px solid rgba(0,0,0,0.05);     /* thin premium border */
   width: 100%;
@@ -1570,16 +1575,15 @@ body {
 .carousel-heading {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   text-align: center;
-  transform: translateY(-35px);
 }
 
 /* ================================ */
 /* IMAGE FRAME */
 .carousel-container {
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1592,7 +1596,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: visible;
-  margin: -34px auto 14px;
+  margin: 6px auto 14px;
   position: relative;
   z-index: 1;
 }
@@ -1688,12 +1692,20 @@ body {
   background: var(--c-red);
 }
 
+@media (max-width: 1100px) {
+  .carousel-btn-left {
+    left: -13px;
+  }
+  .carousel-btn-right {
+    right: -13px;
+  }
+}
 .carousel-btn-left {
-  left: -14px;
+  left: -10px;
 }
 
 .carousel-btn-right {
-  right: -14px;
+  right: -10px;
 }
 
 /* ================================ */
@@ -1724,15 +1736,18 @@ body {
   .carousel-section,
   .airline-carousel-section {
     width: 100%;
-    padding: 22px;
+    max-width: 320px;
+    padding: 14px 14px 10px;
+
   }
 
+
   .carousel-heading {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .carousel-title {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .carousel-btn {
@@ -1760,19 +1775,11 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  .carousel-btn-left {
-    left: px;
-  }
-
-  .carousel-btn-right {
-    right: px;
-  }
-}
 
 @media (max-width: 600px) {
   .carousel-section {
     width: 100%;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
   }

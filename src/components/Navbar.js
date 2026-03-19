@@ -18,9 +18,16 @@ export default function Navbar() {
       const showNavbar = currentScrollY <= 0 || !scrollingDown;
       navbar.classList.toggle("nav-hidden", !showNavbar);
 
-      const atTop = window.scrollY <= 0;
-      navbar.classList.toggle("over-hero", atTop);
-      if (atTop) {
+      const hero = document.querySelector(".home-hero");
+      const navHeight = navbar.offsetHeight || 0;
+      const heroRect = hero ? hero.getBoundingClientRect() : null;
+      const extraHeroPx = 0;
+      const overHero = heroRect
+        ? heroRect.top <= navHeight && heroRect.bottom + extraHeroPx >= navHeight
+        : window.scrollY <= 0;
+
+      navbar.classList.toggle("over-hero", overHero);
+      if (overHero) {
         navbar.classList.remove("scrolled");
       } else {
         navbar.classList.toggle("scrolled", window.scrollY > 20);
@@ -31,7 +38,11 @@ export default function Navbar() {
 
     onScroll();
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
 
 
