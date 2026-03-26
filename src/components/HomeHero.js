@@ -40,7 +40,7 @@ export default function Hero() {
 
       <div className="home-hero-content">
         <img 
-          src="https://i.postimg.cc/ncft3LHK/IMG-2168.jpg"
+          src="/images/IMG_0871-2.jpeg"
           alt="Profile"
           className="profile-pic"
           
