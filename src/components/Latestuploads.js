@@ -4,6 +4,10 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "OW6BUq3LEG0",
+      title: "Is Bangkok Airways THE BEST REGIONAL AIRLINE? (Flying Phuket - Bangkok)",
+    },
+    {
       id: "bY2J-BaVT4w",
       title: "Is FlySafair Just Another RYANAIR? (From LANSERIA!)",
     },
@@ -22,10 +26,6 @@ export default function LatestUploadsWithThumbnails() {
     {
       id: "WNAmr-5lGGk",
       title: "Ethiopian Airlines SAVED ME! (And They are AMAZING!)",
-    },
-    {
-      id: "AICcfhtgT90",
-      title: "You Should Try THIS Thai Sleeper Train!",
     },
   ];
 

@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "OW6BUq3LEG0",
-    title: "Is Bangkok Airways THE BEST REGIONAL AIRLINE? (Flying Phuket - Bangkok)",
+    id: "FYugMR7V92U",
+    title: "Flying IndiGo | A VERY BASIC Airline",
     description:
-      "SkyTrax awarded Bangkok Airways as the BEST REGIONAL AIRLINE in 2025, and after flying with them for the first time in a while, I can confidently say that they have definately earned that title! Flying from Phuket to Bangkok!",
-    thumbnail: "/images/FINAL 2.jpeg",
+      "IndiGo will forever be seen as a Basic and Bland Airline, But is that really a Problem? They deliver what is promised! So See Today what the Indigo Experience from Bangkok to Mumbai really is like!",
+    thumbnail: "/images/Indigo TN 1.jpg",
   };
 
   return (
