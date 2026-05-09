@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import reviews from "../data/reviews";
 
@@ -8,6 +8,14 @@ import reviews from "../data/reviews";
 /* ---------------------- */
 
 export default function Reviews() {
+  const [videoOpen, setVideoOpen] = useState(false);
+  const [selectedVideoId, setSelectedVideoId] = useState(null);
+
+  const handleVideoClick = (videoId) => {
+    setSelectedVideoId(videoId);
+    setVideoOpen(true);
+  };
+
   return (
     <section className="reviews-page">
       <div className="reviews-header">
@@ -53,14 +61,25 @@ export default function Reviews() {
                   </h2>
                 </div>
 
-                {review.slug && (
-                  <Link
-                    to={`/review-pages/${review.slug}`}
-                    className="btn review-card-link"
-                  >
-                    Read full review
-                  </Link>
-                )}
+                <div className="review-buttons-group">
+                  {review.videoID && (
+                    <button
+                      onClick={() => handleVideoClick(review.videoID)}
+                      className="btn review-video-btn"
+                      title="Watch video"
+                    >
+                      ▶ Watch Video
+                    </button>
+                  )}
+                  {review.slug && (
+                    <Link
+                      to={`/review-pages/${review.slug}`}
+                      className="btn review-card-link"
+                    >
+                      Read full review
+                    </Link>
+                  )}
+                </div>
               </div>
 
               {/* ROUTE */}
@@ -116,6 +135,22 @@ export default function Reviews() {
           );
         })}
       </div>
+
+      {/* VIDEO MODAL */}
+      {videoOpen && selectedVideoId && (
+        <div className="featured-modal" onClick={() => setVideoOpen(false)}>
+          <div className="featured-modal-content" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              width="100%"
+              height="500px"
+              src={`https://www.youtube.com/embed/${selectedVideoId}`}
+              title="Review video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

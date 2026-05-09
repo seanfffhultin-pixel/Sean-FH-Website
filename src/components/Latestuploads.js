@@ -4,6 +4,10 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "FYugMR7V92U",
+      title: "Flying IndiGo | A VERY BASIC Airline",
+    },
+    {
       id: "OW6BUq3LEG0",
       title: "Is Bangkok Airways THE BEST REGIONAL AIRLINE? (Flying Phuket - Bangkok)",
     },
@@ -22,10 +26,6 @@ export default function LatestUploadsWithThumbnails() {
     {
       id: "kGnGlGt-Dco",
       title: "Flying ECONOMY on IndiGo’s Hidden Dreamliner (Amsterdam – Mumbai)",
-    },
-    {
-      id: "WNAmr-5lGGk",
-      title: "Ethiopian Airlines SAVED ME! (And They are AMAZING!)",
     },
   ];
 

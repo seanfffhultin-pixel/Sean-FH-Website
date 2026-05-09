@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import reviews from "../data/reviews";
 
 export default function Review() {
   const { reviewId } = useParams();
   const review = reviews.find((item) => item.slug === reviewId);
+  const [videoOpen, setVideoOpen] = useState(false);
 
   if (!review) {
     return (
@@ -71,10 +73,35 @@ export default function Review() {
           )}
 
       <div className="review-page-footer">
+        {review.videoID && (
+          <button
+            onClick={() => setVideoOpen(true)}
+            className="btn review-video-btn"
+            title="Watch video"
+          >
+            ▶ Watch Video
+          </button>
+        )}
         <Link className="review-back-link" to="/reviews">
           Back to all reviews
         </Link>
       </div>
+
+      {/* VIDEO MODAL */}
+      {videoOpen && review.videoID && (
+        <div className="featured-modal" onClick={() => setVideoOpen(false)}>
+          <div className="featured-modal-content" onClick={(e) => e.stopPropagation()}>
+            <iframe
+              width="100%"
+              height="500px"
+              src={`https://www.youtube.com/embed/${review.videoID}`}
+              title="Review video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

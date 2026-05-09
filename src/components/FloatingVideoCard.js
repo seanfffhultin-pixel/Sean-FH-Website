@@ -4,6 +4,10 @@ import { useEffect, useState, useRef } from "react";
 
 const videos = [
   {
+    title: "The FOGGIEST Flight OF MY LIFE! (EasyJet From LONDON SOUTHEND AIRPORT!)",
+    url: "https://www.youtube.com/embed/0AvTiMiBXuA"
+  },
+  {
     title: "Flying IndiGo | A VERY BASIC Airline",
     url: "https://www.youtube.com/embed/FYugMR7V92U"
   },
