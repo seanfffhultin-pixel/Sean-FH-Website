@@ -9,7 +9,7 @@ export default function FeaturedReview() {
     title: "The FOGGIEST Flight OF MY LIFE! (EasyJet From LONDON SOUTHEND AIRPORT!)",
     description:
       "I have never been on a flight with this much fog! The fog was so thick that we were all told to turn off all our devices. On approach we even saw a CELL TOWER poking above the clouds! Also we flew from London's SMALLEST airport! Southend Airport is EasyJet's weirdest base!",
-    thumbnail: "/images/EZYJET 2.jpg",
+    thumbnail: "/assets/EZYJET 2.jpg",
   };
 
   return (

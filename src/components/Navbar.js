@@ -107,7 +107,7 @@ export default function Navbar() {
 
         <Link to="/" className="nav-logo" aria-label="Home">
           <img
-            src="/images/Seanfh NEW logo (modified).png"
+            src="/assets/Seanfh NEW logo (modified).png"
             alt="Sean FH Logo"
             className="nav-logo-img"
           />

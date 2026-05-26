@@ -4,11 +4,11 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 export default function TopAirports() {
 
   const airports = useMemo(() => [
-    { name: "1. Changi Airport, Singapore (SIN)", img: "/images/IMG_3428.jpeg" },
-    { name: "2. Suvarnabhumi Airport, Bangkok (BKK)", img: "/images/IMG_3429.jpeg" },
-    { name: "3. Zayed Airport, Abu Dhabi (AUH)", img: "/images/IMG_4612.jpeg" },
-    { name: "4. Chek Lap Kok Airport, Hong Kong (HKG)", img: "/images/IMG_4613.jpeg" },
-    { name: "5. Istanbul Airport, Istanbul (IST)", img: "/images/IMG_3430.jpeg" },
+    { name: "1. Changi Airport, Singapore (SIN)", img: "/assets/IMG_3428.jpeg" },
+    { name: "2. Suvarnabhumi Airport, Bangkok (BKK)", img: "/assets/IMG_3429.jpeg" },
+    { name: "3. Zayed Airport, Abu Dhabi (AUH)", img: "/assets/IMG_4612.jpeg" },
+    { name: "4. Chek Lap Kok Airport, Hong Kong (HKG)", img: "/assets/IMG_4613.jpeg" },
+    { name: "5. Istanbul Airport, Istanbul (IST)", img: "/assets/IMG_3430.jpeg" },
   ], []);
 
   const [current, setCurrent] = useState(0);

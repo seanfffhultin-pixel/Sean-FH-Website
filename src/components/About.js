@@ -9,7 +9,7 @@ export default function AboutMe() {
       <div className="about-me-container">
         <div className="about-me-img-wrapper">
         <img
-          src="images/IMG_3911.jpeg"
+          src="assets/IMG_3911.jpeg"
           alt="Sean FH"
           className="about-me-img"
         />

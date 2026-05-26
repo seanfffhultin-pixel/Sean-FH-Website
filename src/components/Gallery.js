@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const photos = [
+  "/images/IMG_5796.jpeg", /* Saudia 777 wing (morning-daylight)*/
   "/images/IMG_4618.jpeg", /* BA Embrear*/
   "/images/IMG_4615.jpeg", /* Cathay A330*/
   "/images/IMG_3750.jpeg", /* Etihad 777*/
@@ -9,7 +10,6 @@ const photos = [
   "/images/IMG_2985.jpeg", /* Bangkok Airways A320 wing*/
   "/images/IMG_2754.jpeg", /* Indigo 787*/
   "/images/IMG_1661.jpeg", /* Thai A350 wing*/
-  "/images/IMG_1595.jpeg", /* BA A320 wing*/
   "/images/IMG_1136.jpeg", /* Ethiopian A350*/
   "/images/IMG_1129.jpeg", /* Turkish A350*/
   "/images/IMG_9301.jpeg", /* Flysafair 737*/

@@ -23,8 +23,20 @@ async function processImage(file) {
   const input = path.join(srcDir, file);
 
   try {
-    // Skip if already a generated variant
-    if (name.match(/-(thumb|\d{3,})$/)) {
+    // Skip generated variant files that already live in the images folder.
+    if (name.match(/-(thumb|400|800|1200)$/)) {
+      return { ok: true };
+    }
+
+    // Skip if all responsive variants already exist for this source image.
+    const expectedOutputs = [
+      ...sizes.map((w) => `${name}-${w}.jpeg`),
+      ...sizes.map((w) => `${name}-${w}.webp`),
+      `${name}-thumb.jpeg`,
+    ];
+    const alreadyGenerated = expectedOutputs.every((output) => fs.existsSync(path.join(srcDir, output)));
+    if (alreadyGenerated) {
+      console.log(`Skipping already-generated variants for: ${file}`);
       return { ok: true };
     }
 

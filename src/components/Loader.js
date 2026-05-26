@@ -6,7 +6,7 @@ export default function Loader() {
       <div className="loader-content">
 
         <img
-          src="/images/Seanfh NEW logo (modified).png"
+          src="/assets/Seanfh NEW logo (modified).png"
           alt="Sean FH Logo"
           className="loader-logo-img"
         />
