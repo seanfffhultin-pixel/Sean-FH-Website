@@ -4,6 +4,10 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "0AvTiMiBXuA",
+      title: "The FOGGIEST Flight OF MY LIFE! (EasyJet From LONDON SOUTHEND AIRPORT!)",
+    },
+    {
       id: "FYugMR7V92U",
       title: "Flying IndiGo | A VERY BASIC Airline",
     },
@@ -22,10 +26,6 @@ export default function LatestUploadsWithThumbnails() {
     {
       id: "Aa03AJwh9f8",
       title: "LONG-HAUL On Asia's UNDERDOG! (Does It Live Up To The Rest?)",
-    },
-    {
-      id: "kGnGlGt-Dco",
-      title: "Flying ECONOMY on IndiGo’s Hidden Dreamliner (Amsterdam – Mumbai)",
     },
   ];
 

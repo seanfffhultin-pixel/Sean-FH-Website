@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "0AvTiMiBXuA",
-    title: "The FOGGIEST Flight OF MY LIFE! (EasyJet From LONDON SOUTHEND AIRPORT!)",
+    id: "XCsjAJMhWcc",
+    title: "IS CATHAY PACIFIC THE WORLD'S BEST AIRLINE?",
     description:
-      "I have never been on a flight with this much fog! The fog was so thick that we were all told to turn off all our devices. On approach we even saw a CELL TOWER poking above the clouds! Also we flew from London's SMALLEST airport! Southend Airport is EasyJet's weirdest base!",
-    thumbnail: "/assets/EZYJET 2.jpg",
+      "In 2025 Cathay Pacific was awarded the title of 'World's Best Economy Class' by Skytrax. But is it really that good? In this video I'm flying from Hong Kong to Bangkok on one of many short haul A330s, and my experience was VERY memorable...!",
+    thumbnail: "/assets/CA 1B.jpg",
   };
 
   return (

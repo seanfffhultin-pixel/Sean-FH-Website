@@ -4,6 +4,10 @@ import { useEffect, useState, useRef } from "react";
 
 const videos = [
   {
+    title: "IS CATHAY PACIFIC THE WORLD'S BEST AIRLINE?",
+    url: "https://www.youtube.com/embed/XCsjAJMhWcc"
+  },
+  {
     title: "The FOGGIEST Flight OF MY LIFE! (EasyJet From LONDON SOUTHEND AIRPORT!)",
     url: "https://www.youtube.com/embed/0AvTiMiBXuA"
   },

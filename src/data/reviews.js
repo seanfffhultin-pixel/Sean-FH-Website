@@ -37,7 +37,7 @@ const reviews = [
     ],
     story:
       "This is one of the flights that I have been looking forward to since I booked it, I've always wanted to fly Cathay Pacific and although this flight was only ~3 hours long, it more than lived up to the hype that the internet had fed me, it exceeded it with flying colors! I started of this flight at Hong Kong's Chek Lap Kok airport - the one with the bridge - and we boarded the beauty, the A330. The crew's service was top-notch and I very much enjoyed the massive selection on offer on Cathay's IFE. As well as this, Cathay's in-house catering in Hong Kong did a fantastic job with the food, very delicious - it even came with complementary ICECREAM! Although the cabin was a little dated, and maybe the flight was shorter than I had hoped, and maybe I didn't get to try Cathay's FULL Long-Haul experience, I was more than happy with this flight, and a massive upgrade from the competition - the likes of THAI (sorry), AirAsia, Hong Kong Express (which is owned by Cathay Pacific) etc. Overall, this flight was great, VERY NICE, I would 100% do it again (maybe even long-haul in the future??)!",
-    videoID: ""
+    videoID: "XCsjAJMhWcc"
   },
 
   {
