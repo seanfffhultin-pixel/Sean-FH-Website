@@ -2999,7 +2999,7 @@ body {
   max-width: 800px;
   margin: 120px auto 40px;
   padding: 30px;
-  background: var(--c-white-95);
+  background: var(--c-white);
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   line-height: 1.6;
