@@ -4,6 +4,14 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "P63RLWre9Fk",
+      title: "IS ETIHAD'S OLD 777 ACTUALLY GOOD?!",
+    },
+    {
+      id: "XCsjAJMhWcc",
+      title: "IS CATHAY PACIFIC THE WORLD'S BEST AIRLINE?",
+    },
+    {
       id: "0AvTiMiBXuA",
       title: "The FOGGIEST Flight OF MY LIFE! (EasyJet From LONDON SOUTHEND AIRPORT!)",
     },
@@ -19,14 +27,7 @@ export default function LatestUploadsWithThumbnails() {
       id: "bY2J-BaVT4w",
       title: "Is FlySafair Just Another RYANAIR? (From LANSERIA!)",
     },
-    {
-      id: "n_o-uCUZOBQ",
-      title: "The Reality of THAI AIRWAYS DOMESTIC...",
-    },
-    {
-      id: "Aa03AJwh9f8",
-      title: "LONG-HAUL On Asia's UNDERDOG! (Does It Live Up To The Rest?)",
-    },
+    
   ];
 
   return (

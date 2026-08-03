@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "XCsjAJMhWcc",
-    title: "IS CATHAY PACIFIC THE WORLD'S BEST AIRLINE?",
+    id: "QyKWkWcN2DU",
+    title: "MY MOST PERFECT FLIGHT EVER! - FLYING THE ETIHAD 787-10!",
     description:
-      "In 2025 Cathay Pacific was awarded the title of 'World's Best Economy Class' by Skytrax. But is it really that good? In this video I'm flying from Hong Kong to Bangkok on one of many short haul A330s, and my experience was VERY memorable...!",
-    thumbnail: "/assets/CA 1B.jpg",
+      "This flight on Etihad's 787 was one of the best flights of my life to date, not only is the aircraft incredibly comfortable, but the food provided by Etihad is also TOP NOTCH! This really was a PERFECT flight!",
+    thumbnail: "/assets/ETIHAD 787_5.jpg",
   };
 
   return (

@@ -4,6 +4,14 @@ import { useEffect, useState, useRef } from "react";
 
 const videos = [
   {
+    title: "MY MOST PERFECT FLIGHT EVER! - FLYING THE ETIHAD 787-10!",
+    url: "https://www.youtube.com/embed/QyKWkWcN2DU"
+  },
+  {
+    title: "IS ETIHAD'S OLD 777 ACTUALLY GOOD?!",
+    url: "https://www.youtube.com/embed/P63RLWre9Fk"
+  },
+  {
     title: "IS CATHAY PACIFIC THE WORLD'S BEST AIRLINE?",
     url: "https://www.youtube.com/embed/XCsjAJMhWcc"
   },

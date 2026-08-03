@@ -1,5 +1,26 @@
 // Shared review data for list and detail pages.
 const reviews = [
+    {
+    title: "Etihad Economy",
+    slug: "etihad-economy-ey41-auh-ams",
+    route: "EY41 AUH → AMS",
+    aircraft: "Airbus A350-1000",
+    flightTime: "8h 47m",
+    seat: "28K → 29K",
+    date: "January 2026",
+    rating: 3,
+    logo: "/assets/Etihad-airways-logo.svg.png",
+    images: [
+      "/assets/EY-350-seats.jpeg",
+      "/assets/EY-350-food.jpeg",
+      "/assets/EY-350-winglet.jpeg",
+      "/assets/EY-350-VS.jpeg",
+    ],
+    story:
+      "This was one hell of a flight, we start in Abu Dhabi Zayed Airport after just transiting from a 787 flight from Kuala Lumpur, this flight is operated by an A350-1000. For a start we were late to the gate, and then after getting onboard and to our seats, we find out much of my row is filled with the stench of vomit! I later see it on my pillow (which obviously wasn't changed) and on the overhead bin! Lord knows how it got there! Anyway after a seat move to the row behind, we take off and the meal service starts soon after, pretty good! I go for the pasta option. No, fast foward to the end of the flight, which after enduring a full 8 hours of vomit smell, we are informed that Amsterdam is full of snow and that we'll have to hold until a slot and gate frees up - we eventually land; the fact that multiple mishaps happened on this flight is remarkable. Somehow though I wasn't and I still am not too annoyed as, not only did we get compensation, but the crew were also very accommdating and changed the covers of the stained seats. This will go down as one of my most interesting flights ever - one for the books. THE VOMIT PLANE, we now call it in my family! ",
+    videoID: ""
+  },
+
   {
     title: "Etihad Economy",
     slug: "etihad-economy-ey489-kul-auh",
@@ -16,7 +37,7 @@ const reviews = [
     ],
     story:
       "This was probably the most flawless flight I've taken in a LONG TIME, and definitely the best Etihad flight I took on this trip. We started off in Kuala Lumpur, and got to the airport, now I do have a few comments on the airport's interesting design but I'll leave that for the video, anyway, we got onto the plane and although the seats lacked the cool remotes that the 787-9 had, this 787-10 was still very nice, with very comfy seats, and one of the largest pillows I've ever seen in economy class, as well as a very fluffy blanket. The IFE was also very good, much better than the 777 I'd flown earlier in the trip, a much wider selection of everything, and just a much larger and higher resolution screen! The food was, like last time, great, with plenty of options - including a classic pasta dish, some mash with beef, and a chicken and rice option, all served with the usual sides. And of course, this flight wasn't that long (~7 hours) so I wasn't expecting a second meal service. However, they did come round with drinks mulitple times and towards the end served OREOS (with a more extensive dinks selection of course) - I believe they did have a little snack bar at the rear galley but I didn't check... So overall, this was a great flight with flawless... EVERYTHING! I applaud Etihad for this brilliant flight!",
-    videoID: ""
+    videoID: "QyKWkWcN2DU"
   },
 
   {
@@ -69,7 +90,7 @@ const reviews = [
     images: ["/assets/Image (11).jpeg"],
     story:
       "This is one of Etihad's oldest aircraft, and it does show, from older IFE moniters, dated cabin design to fairly worn seats, you could tell this aircraft was nearly 14 years old, however I do commend Etihad for keeping it in such good condition and reupolstering the seats with the new design. All together I found the crew were very attentive and friendly, the food included options like beef and mash, chicken and rice or some curry, and the content on option was extensive, maybe not as much as the newer A350s (hint hint) but still miles ahead than the likes of Norse/Indigo. I really enjoyed this flight and I'm very glad we got seats in the last few rows where the cabin is slimmer so it is configured 2-4-2 instead of 3-4-3, otherwise I think my experience would have been a litttle different. Overall, Etihad blew away my expectations and I have alot more Etihad content to come. PLUS Etihad's hub in Abu Dhabi is georgous - a beautiful blend of modern architecture and traditional sandy destert tones! Very easy to transit in - very fast, and a great amount of shops and restaurants to pass time. (though our connections were very close together!)",
-    videoID: ""
+    videoID: "P63RLWre9Fk"
   },
 
   {
