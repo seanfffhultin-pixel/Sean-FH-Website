@@ -9,7 +9,7 @@ export default function FeaturedReview() {
     title: "MY MOST PERFECT FLIGHT EVER! - FLYING THE ETIHAD 787-10!",
     description:
       "This flight on Etihad's 787 was one of the best flights of my life to date, not only is the aircraft incredibly comfortable, but the food provided by Etihad is also TOP NOTCH! This really was a PERFECT flight!",
-    thumbnail: "/assets/ETIHAD 787_5.jpg",
+    thumbnail: "/assets/ETIHAD 787_5B.png",
   };
 
   return (
