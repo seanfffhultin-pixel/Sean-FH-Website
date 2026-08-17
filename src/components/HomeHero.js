@@ -39,29 +39,20 @@ export default function Hero() {
       )}
 
       <div className="home-hero-content">
-        <img 
+        <img
           src="/assets/IMG_0871-2.jpeg"
-          alt="Profile"
+          alt="Sean FH"
           className="profile-pic"
-          
         />
-      
-
-        <div className="home-hero-welcome-1">
-          <h2>Welcome to</h2>
-        </div>
-
-        <div className="home-hero-welcome-2">
-          <h2>Sean FH Travels</h2>
-        </div>
-
-        <div className="home-hero-sub">
-          <h2>Flight reviews, aviation stories, and more!</h2>
-        </div>
-          
+        <h1 className="home-hero-title">
+          <span>Sean FH</span>
+          Travels
+        </h1>
+        <p className="home-hero-sub">
+          Flight reviews, aviation stories, and the journeys in between.
+        </p>
 
         <div className="home-hero-buttons">
-
           <Link to="/about" className="btn">
             Learn More
           </Link>
