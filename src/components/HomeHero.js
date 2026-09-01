@@ -27,7 +27,7 @@ export default function Hero() {
           playsInline
           onError={() => setVideoFailed(true)}
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src="/videos/hero2.mp4" type="video/mp4" />
         </video>
       )}
       {videoFailed && (
