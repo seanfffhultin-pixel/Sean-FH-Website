@@ -1020,6 +1020,55 @@ body {
   box-shadow: var(--shadow-xl);
 }
 
+.subscriber-notification {
+  position: fixed;
+  right: 20px;
+  top: 112px;
+  width: 300px;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+  padding: 22px 20px 20px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff8f2 0%, var(--c-white) 72%);
+  box-shadow: var(--shadow-md);
+  z-index: 9998;
+  transition: top 0.25s ease, transform 0.45s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease;
+}
+
+.subscriber-notification:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.subscriber-notification.navbar-is-hidden {
+  top: 28px;
+}
+
+.subscriber-notification-kicker {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--c-red);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.subscriber-notification strong {
+  display: block;
+  padding-right: 34px;
+  color: var(--c-gray-800);
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+.subscriber-notification p {
+  margin: 10px 0 0;
+  color: var(--c-gray-600);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
 /* Close button */
 .close-btn {
   position: absolute;
@@ -1410,7 +1459,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 80px auto;
-  padding: 50px 30px;
+  padding: 50px 30px 0;
   text-align: center;
   background: rgba(255,255,255,0.8);
   border: 1px solid rgba(17,24,39,0.06);
@@ -1456,7 +1505,7 @@ body {
 @media (min-width: 1024px) {
   .podcast-section {
     max-width: 1000px;
-    padding: 40px 24px;
+    padding: 40px 24px 0;
     margin: 60px auto;
   }
 
@@ -1526,7 +1575,7 @@ body {
   }
 
   .podcast-section {
-    padding: 40px 20px;
+    padding: 40px 20px 0;
   }
 
   .podcast-title {
@@ -1546,7 +1595,7 @@ body {
 
 @media (max-width: 480px) {
   .podcast-section {
-    padding: 30px 15px;
+    padding: 30px 15px 0;
   }
 
   .podcast-title {

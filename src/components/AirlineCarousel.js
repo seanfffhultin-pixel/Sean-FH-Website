@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 
 const airlines = [
+  "assets/Qatar-Airways-Logo.png",
   "assets/Cathay-Pacific-Logo.png",
   "assets/Bangkok_Airways_Logo.svg.png",
   "assets/IndiGo_Airlines_logo.svg.png",

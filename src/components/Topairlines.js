@@ -8,7 +8,7 @@ export default function TopAirlines() {
     { name: "2. Etihad Airways", img: "/images/IMG_4610.jpeg", /* Etihad 787*/ },
     { name: "3. Turkish Airlines", img: "/images/IMG_1129.jpeg", /* Turkish A350*/ },
     { name: "4. Cathay Pacific", img: "/images/IMG_4619.jpeg", /* Cathay A330*/ },
-    { name: "5. Thai Airways", img: "/images/IMG_0403.jpeg", /* Thai Airways A350*/ },
+    { name: "5. Qatar Airways", img: "/images/IMG_6886.jpeg", /* Qatar Airways A350*/ },
   ], []);
 
 

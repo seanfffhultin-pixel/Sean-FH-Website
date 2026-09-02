@@ -18,7 +18,7 @@ const reviews = [
     ],
     story:
       "This was one hell of a flight, we start in Abu Dhabi Zayed Airport after just transiting from a 787 flight from Kuala Lumpur, this flight is operated by an A350-1000. For a start we were late to the gate, and then after getting onboard and to our seats, we find out much of my row is filled with the stench of vomit! I later see it on my pillow (which obviously wasn't changed) and on the overhead bin! Lord knows how it got there! Anyway after a seat move to the row behind, we take off and the meal service starts soon after, pretty good! I go for the pasta option. No, fast foward to the end of the flight, which after enduring a full 8 hours of vomit smell, we are informed that Amsterdam is full of snow and that we'll have to hold until a slot and gate frees up - we eventually land; the fact that multiple mishaps happened on this flight is remarkable. Somehow though I wasn't and I still am not too annoyed as, not only did we get compensation, but the crew were also very accommdating and changed the covers of the stained seats. This will go down as one of my most interesting flights ever - one for the books. THE VOMIT PLANE, we now call it in my family! ",
-    videoID: ""
+    videoID: "6YFTWjdhpJ0"
   },
 
   {

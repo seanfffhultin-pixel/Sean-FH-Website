@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 const photos = [
+    "/images/IMG_6999.jpeg", /* Qatar Airways A350 wing (night-time)*/
+    "/images/IMG_6886.jpeg", /* Qatar Airways A350 exterior*/
+    "/images/IMG_6880.jpeg", /* Singapore Airlines 777 exterior*/
+    "/images/IMG_6710.jpeg", /* AirAsia A321 (connected to jetbridge in DMK)*/
+    "/images/IMG_6698.jpeg", /* AirAsia A320 exterior*/
+    "/images/IMG_6587.jpeg", /* Etihad A380 exterior (connected to jetbridges in AUH)*/
+    "/images/IMG_6565.jpeg", /* Etihad A380 wing (daylight)*/
+    "/images/IMG_6497.jpeg", /* Etihad A380 wing (night-time)*/
+    "/images/IMG_6453.jpeg", /* Etihad A380 exterior (connected to jetbridges in LHR)*/
     "/images/IMG_5796.jpeg", /* Saudia 777 wing (morning-daylight)*/
     "/images/IMG_5768.jpeg", /* Saudia 787 (night-time) exterior*/
     "/images/IMG_5489.jpeg", /* Cathay A321neo exterior*/

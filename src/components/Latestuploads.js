@@ -4,6 +4,10 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "QyKWkWcN2DU",
+      title: "MY MOST PERFECT FLIGHT EVER! - FLYING THE ETIHAD 787-10!",
+    },
+    {
       id: "P63RLWre9Fk",
       title: "IS ETIHAD'S OLD 777 ACTUALLY GOOD?!",
     },
@@ -23,10 +27,7 @@ export default function LatestUploadsWithThumbnails() {
       id: "OW6BUq3LEG0",
       title: "Is Bangkok Airways THE BEST REGIONAL AIRLINE? (Flying Phuket - Bangkok)",
     },
-    {
-      id: "bY2J-BaVT4w",
-      title: "Is FlySafair Just Another RYANAIR? (From LANSERIA!)",
-    },
+    
     
   ];
 

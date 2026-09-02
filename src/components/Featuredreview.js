@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "QyKWkWcN2DU",
-    title: "MY MOST PERFECT FLIGHT EVER! - FLYING THE ETIHAD 787-10!",
+    id: "6YFTWjdhpJ0",
+    title: "THIS ETIHAD FLIGHT WAS DISGUSTING 🤢! (IT STANK!)",
     description:
-      "This flight on Etihad's 787 was one of the best flights of my life to date, not only is the aircraft incredibly comfortable, but the food provided by Etihad is also TOP NOTCH! This really was a PERFECT flight!",
-    thumbnail: "/assets/ETIHAD 787_5B.png",
+      "This flight was a complete disaster! Not only was there vomit all over my seat, but there was also a snowstorm at the destination (Amsterdam)! Join me on this chaotic experience, full of high-highs and low-lows!",
+    thumbnail: "/assets/Etihad A350_1.png",
   };
 
   return (

@@ -33,7 +33,7 @@ export default function Hero() {
       {videoFailed && (
         <img
           className="home-hero-fallback"
-          src="/images/IMG_4619.jpeg"
+          src="/images/IMG_6587.jpeg"
           alt="Hero background"
         />
       )}
