@@ -1,6 +1,69 @@
 // Shared review data for list and detail pages.
 const reviews = [
-    {
+  {
+    title: "Saudia Economy",
+    slug: "saudia-economy-sv144-cdg-ruh",
+    route: "SV144 CDG → RUH",
+    aircraft: "Boeing 777-300ER",
+    flightTime: "6h 5m",
+    seat: "54A",
+    date: "March 2026",
+    rating: 3,
+    logo: "/assets/Logo-Saudia-.avif",
+    images: [
+      "/assets/SV-777-seats.jpeg",
+      "/assets/SV-777-cabin.jpg",
+      "/assets/SV-777-wing.JPG",
+      "/assets/SV-777-food.jpeg",
+    ],
+    story:
+      "This was one of the most confusing flights of my life, it's like the Saudia I have become used to doesn't exist anymore, gone are the amenity kits, the modern IFE and the free seat selection. This flight on Saudia's 777 was really a completely different airline, first of all, I want to point out that I don't dislike Saudia, and I want them to succeed in a region with growing instablility and competition. So, this trip took me from Paris Charles De Gaulle to Riyadh on Saudia's packed, old 777. Paris is always an experience, especially flying from Termainal 1 - it's a bit of a crowded mess. It seems like this flight is mainly taken by Saudis going to Riyadh - evident from the people in the check-in queue, and so this flight was quite a different experience from the flights I have taken with Saudia to Jeddah. Unusually this whole experience felt alot more like a low-cost airline - for one, during online check-in there was a surprising lack of free seat selection, something that seems to have disappeared off of most middle eastern airlines. But the things I noticed the most about Saudia on this trip was the lack of amenity kits and the ageing hardware that kept on glitching whenever we tapped things - of course the hardware is because of the 777 and the older seats used on this flight, but the amenity kit was absent for no particular reason - and what makes it even more confusing, was that on a flight I took with them a few weeks later, they did provide amenity kits! However, the food was still pretty good - consisting of a pasta dish (a chicken and beef option were also provided), a salad, a mousse and a water bottle (and a beverage of choice) , pillows and blankets were provided, the crew were alright (but a bit robotic), and the seat was fairly comfortable (even if a bit old). So I probably will fly Saudia again - specifically for the great price - but I hope to see them improve.",
+    videoID: ""
+  },
+
+  {
+    title: "Ryanair Economy",
+    slug: "ryanair-economy-fr2814-stn-cgn",
+    route: "FR2814 STN → CGN",
+    aircraft: "Boeing 737 MAX 8-200",
+    flightTime: "1h 47m",
+    seat: "34D",
+    date: "February 2026",
+    rating: 2,
+    logo: "/assets/FR copy.png",
+    images: [
+      "/assets/FR-737MAX-seats.jpeg",
+      "/assets/FR-737MAX-cabin.jpeg",
+      "/assets/FR-737MAX-tail.jpeg",
+      "/images/IMG_4075 (image(2)).jpeg",
+    ],
+    story:
+      "Ryanair is known for their no-frills business model, this means it can charge rock-bottom prices, but with a catch, no extras! For this flight, I challenged myself to fly with zero paid extras, no checked luggage, no extra food, no seat selection! This of course meant that I did not get a window seat, but it instead meant I had a super cheap flight from London Stansted to Cologne, Germany! This trip obviously started off in the Ryanair capital of the world, London Stansted. Because I had no checked luggage, I went straight to the crowded security line - after getting through, I braved duty-free, and got myself some sushi at one of many fast-food chains in Stansted. Soon, my flight was called and we headed to the gate - of course boarding last, because priority boarding is basically pointless! My seat for today would be 34D, an aisle seat - the seat I had been allocated during ONLINE check-in. This flight was pretty much completely uneventful - bar the PAID snack trolley that was also selling SCRATCH CARDS and CIGARETTES! This flight was one of the most tiring in my life, but I'm glad I now know what I should avoid in future!",
+    videoID: ""
+  },
+
+  {
+    title: "British Airways Economy",
+    slug: "british-airways-economy-ba4453-rtm-lcy",
+    route: "BA4453 RTM → LCY",
+    aircraft: "Embraer E190",
+    flightTime: "~1h 00m",
+    seat: "17A",
+    date: "January 2026",
+    rating: 4,
+    logo: "/assets/British-Airways-Logo.png",
+    images: [
+      "/assets/BA-190-seats.jpeg",
+      "/images/IMG_4618.jpeg",
+      "/images/IMG_4637.jpeg",
+      "/assets/BA-190-food.jpeg",
+    ],
+    story:
+      "This was one of the most exciting flights of my life! This was originally meant to be a simple flight from Amsterdam to London (Heathrow), but because of the snow in Amsterdam, basically every single flight was cancelled - including mine, so instead, British Airways put us all on a specially chartered flight leaving the next day - from ROTTERDAM to LONDON CITY! This resulted in us scrambling to get to Rotterdam, but because the trains or buses weren't running, we resorted to calling an Uber, which costed a small fortune (BA paid for it). They then provided us with enough money to stay at the Ibis at Rotterdam Airport. The next morning we entered the airport, checked in and had breakfast at an Airside Café - this was again paid for by BA. Now for the actual flight; British Airways did a fantastic job - not only was the aircraft in a 2-2 (4 abreast) configuration, which means there are only aisle and window seats, but BA also provided a pretty decent snack service on a 1-hour flight! British Airways Cityflyer is a GEM in the British Airways fleet!",
+    videoID: ""
+  },
+
+  {
     title: "Etihad Economy",
     slug: "etihad-economy-ey41-auh-ams",
     route: "EY41 AUH → AMS",
@@ -17,7 +80,7 @@ const reviews = [
       "/assets/EY-350-VS.jpeg",
     ],
     story:
-      "This was one hell of a flight, we start in Abu Dhabi Zayed Airport after just transiting from a 787 flight from Kuala Lumpur, this flight is operated by an A350-1000. For a start we were late to the gate, and then after getting onboard and to our seats, we find out much of my row is filled with the stench of vomit! I later see it on my pillow (which obviously wasn't changed) and on the overhead bin! Lord knows how it got there! Anyway after a seat move to the row behind, we take off and the meal service starts soon after, pretty good! I go for the pasta option. No, fast foward to the end of the flight, which after enduring a full 8 hours of vomit smell, we are informed that Amsterdam is full of snow and that we'll have to hold until a slot and gate frees up - we eventually land; the fact that multiple mishaps happened on this flight is remarkable. Somehow though I wasn't and I still am not too annoyed as, not only did we get compensation, but the crew were also very accommdating and changed the covers of the stained seats. This will go down as one of my most interesting flights ever - one for the books. THE VOMIT PLANE, we now call it in my family! ",
+      "This was one hell of a flight, we start in Abu Dhabi Zayed Airport after just transiting from a 787 flight from Kuala Lumpur, this flight is operated by an A350-1000. For a start we were late to the gate, and then after getting onboard and to our seats, we find out much of my row is filled with the stench of vomit! I later see it on my pillow (which obviously wasn't changed) and on the overhead bin! Lord knows how it got there! Anyway after a seat move to the row behind, we take off and the meal service starts soon after, pretty good! I go for the pasta option. No, fast foward to the end of the flight, which after enduring a full 8 hours of vomit smell, we are informed that Amsterdam is full of snow and that we'll have to hold until a slot and gate frees up - we eventually land; the fact that multiple mishaps happened on this flight is remarkable. Somehow though I wasn't and I still am not too annoyed as, not only did we get compensation, but the crew were also very accommdating and changed the covers of the stained seats. This will go down as one of my most interesting flights ever - one for the books. THE VOMIT PLANE, we now call it in my family!",
     videoID: "6YFTWjdhpJ0"
   },
 
