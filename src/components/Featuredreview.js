@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "6YFTWjdhpJ0",
-    title: "THIS ETIHAD FLIGHT WAS DISGUSTING 🤢! (IT STANK!)",
+    id: "nC9IXGwQ6IY",
+    title: "BRITISH AIRWAYS SAVED ME FROM A SNOWSTORM! 🤯",
     description:
-      "This flight was a complete disaster! Not only was there vomit all over my seat, but there was also a snowstorm at the destination (Amsterdam)! Join me on this chaotic experience, full of high-highs and low-lows!",
-    thumbnail: "/assets/Etihad A350_1.png",
+      "This was supposed to be a very normal flight from Amsterdam to London (Heathrow) - instead due to a crazy snowstorm, we got rerouted via Rotterdam and we got to fly on one of BA's best aircraft, the E190! So not a total disaster!",
+    thumbnail: "/assets/BA E190_1.png",
   };
 
   return (
