@@ -1,6 +1,18 @@
 import React, { useEffect, useState } from "react";
 
 const photos = [
+    "/images/IMG_7756.jpeg", /* Brussels Airlines A320 wing*/
+    "/images/IMG_7744.jpeg", /* Brussels Airlines A320 fuselage + Sean*/
+    "/images/IMG_7733.jpeg", /* Brussels Airlines A320 exterior (connected to jetbridge in ZRH)*/
+    "/images/IMG_7704.jpeg", /* Swiss 777 exterior (connected to jetbridge in ZRH)*/
+    "/images/IMG_7646.jpeg", /* Swiss 777 wing*/
+    "/images/IMG_7561.jpeg", /* Swiss 777 exterior*/
+    "/images/IMG_7481.jpeg", /* Lufthansa A380 exterior*/
+    "/images/IMG_7420.jpeg", /* Lufthansa A380 wing*/
+    "/images/IMG_7361.jpeg", /* Lufthansa A380 interior*/
+    "/images/IMG_7325.jpeg", /* Brussels Airlines A320 wing*/
+    "/images/IMG_7307.jpeg", /* Brussels Airlines A320 interior*/
+    "/images/IMG_7043.jpeg", /* Qatar Airways 777 side*/
     "/images/IMG_6999.jpeg", /* Qatar Airways A350 wing (night-time)*/
     "/images/IMG_6886.jpeg", /* Qatar Airways A350 exterior*/
     "/images/IMG_6880.jpeg", /* Singapore Airlines 777 exterior*/

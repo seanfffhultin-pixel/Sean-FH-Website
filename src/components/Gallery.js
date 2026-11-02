@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 const photos = [
+  "/images/IMG_7561.jpeg", /* Swiss 777 exterior*/
+  "/images/IMG_7481.jpeg", /* Lufthansa A380 exterior*/
+  "/images/IMG_7420.jpeg", /* Lufthansa A380 wing*/
   "/images/IMG_6886.jpeg", /* Qatar Airways A350 exterior*/
   "/images/IMG_6497.jpeg", /* Etihad A380 wing (night-time)*/
   "/images/IMG_5796.jpeg", /* Saudia 777 wing (morning-daylight)*/

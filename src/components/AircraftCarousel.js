@@ -8,7 +8,7 @@ const aircraft = [
   "Airbus A330-300",
   "Airbus A330-200",
   "Airbus A330-900neo",
-  "Airbus A340-600",
+  "Airbus A340-500",
   "Airbus A319-100/200",
   "Airbus A320-100/200",
   "Airbus A321-100/200",

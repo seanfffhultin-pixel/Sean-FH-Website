@@ -5,11 +5,11 @@ export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
 
   const featured = {
-    id: "nC9IXGwQ6IY",
-    title: "BRITISH AIRWAYS SAVED ME FROM A SNOWSTORM! 🤯",
+    id: "nt69ebmsfrI",
+    title: "I TRIED RYANAIR WITH NO EXTRAS! (I HATED IT!)",
     description:
-      "This was supposed to be a very normal flight from Amsterdam to London (Heathrow) - instead due to a crazy snowstorm, we got rerouted via Rotterdam and we got to fly on one of BA's best aircraft, the E190! So not a total disaster!",
-    thumbnail: "/assets/BA E190_1.png",
+      "I tried Ryanair with absolutely NO EXTRAS! It was not a pleasant experience. From slow boarding, no seat selection, little comfort and no meals, this was a flight  really tested my patience. But it was ALL MY FAULT (but totally worth it!)",
+    thumbnail: "/assets/RY_4.png",
   };
 
   return (

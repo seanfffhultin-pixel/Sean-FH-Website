@@ -4,6 +4,10 @@ import "../App.css"; // We'll create this CSS file
 export default function LatestUploadsWithThumbnails() {
   const videos = [
     {
+      id: "nC9IXGwQ6IY",
+      title: "BRITISH AIRWAYS SAVED ME FROM A SNOWSTORM! 🤯",
+    },
+    {
       id: "6YFTWjdhpJ0",
       title: "THIS ETIHAD FLIGHT WAS DISGUSTING 🤢! (IT STANK!)",
     },
@@ -23,10 +27,7 @@ export default function LatestUploadsWithThumbnails() {
       id: "0AvTiMiBXuA",
       title: "The FOGGIEST Flight OF MY LIFE! (EasyJet From LONDON SOUTHEND AIRPORT!)",
     },
-    {
-      id: "FYugMR7V92U",
-      title: "Flying IndiGo | A VERY BASIC Airline",
-    },
+    
     
     
   ];
