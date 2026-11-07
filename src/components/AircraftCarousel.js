@@ -8,7 +8,8 @@ const aircraft = [
   "Airbus A330-300",
   "Airbus A330-200",
   "Airbus A330-900neo",
-  "Airbus A340-500",
+  "Airbus A340-300",
+  "Airbus A340-600",
   "Airbus A319-100/200",
   "Airbus A320-100/200",
   "Airbus A321-100/200",
@@ -30,7 +31,7 @@ const aircraft = [
   "Mitsubishi CRJ-100",
   "de Havilland Canada Dash 8-400",
   "Saab 2000",
-  "BAE Systems Avro RJ100",
+  "BAE Systems Avro RJ85",
   "Cessna 172 Skyhawk",
   "ATR 72",
 ];

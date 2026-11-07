@@ -1,16 +1,30 @@
-import React, { useState } from "react";
-import "../App.css"; // Make sure this import exists
+import React, { useEffect, useState } from "react";
+import "../App.css";
+import { fallbackVideos, getLatestVideos } from "../data/youtube";
 
 export default function FeaturedReview() {
   const [open, setOpen] = useState(false);
+  const [featured, setFeatured] = useState(fallbackVideos[0]);
 
-  const featured = {
-    id: "nt69ebmsfrI",
-    title: "I TRIED RYANAIR WITH NO EXTRAS! (I HATED IT!)",
-    description:
-      "I tried Ryanair with absolutely NO EXTRAS! It was not a pleasant experience. From slow boarding, no seat selection, little comfort and no meals, this was a flight  really tested my patience. But it was ALL MY FAULT (but totally worth it!)",
-    thumbnail: "/assets/RY_4.png",
-  };
+  useEffect(() => {
+    let active = true;
+    const updateFeatured = (forceRefresh = false) => getLatestVideos(forceRefresh).then((videos) => {
+      if (active && videos[0]) setFeatured(videos[0]);
+    });
+    updateFeatured();
+    const timer = window.setInterval(() => updateFeatured(true), 15 * 60 * 1000);
+    return () => {
+      active = false;
+      window.clearInterval(timer);
+    };
+  }, []);
+
+  const description = featured.description || "";
+  const noAiMarker = description.search(/\*{0,2}\s*NO\s+AI\s+WAS\s+USED\s+IN\s+THE\s+MAKING\s+OF\s+THIS\s+VIDEO\b/i);
+  const featuredDescription = (noAiMarker === -1
+    ? description
+    : description.slice(0, noAiMarker)
+  ).trim();
 
   return (
     <section id="featured-review" className="featured-review-section">
@@ -24,7 +38,12 @@ export default function FeaturedReview() {
         />
         <div className="featured-info">
           <h4>{featured.title}</h4>
-          <p>{featured.description}</p>
+          <p className="featured-views">
+            {Number.isFinite(featured.viewCount)
+              ? `${new Intl.NumberFormat().format(featured.viewCount)} views`
+              : "Views unavailable"}
+          </p>
+          {featuredDescription && <p>{featuredDescription}</p>}
           <button className="featured-btn">Watch Now</button>
         </div>
       </div>

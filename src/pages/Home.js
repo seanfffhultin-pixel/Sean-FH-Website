@@ -9,7 +9,6 @@ import Gallery from "../components/Gallery";
 import Socials from "../components/Socials";
 import About from "../components/About";
 import Featuredreview from "../components/Featuredreview";
-import Podcast from "../components/Podcast";
 import TopLists from "../components/Toplists";
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
         <Featuredreview />
         <Latestuploads />
       </section>
-      <Podcast />
       <TopLists />
       <Gallery />
       <Socials />

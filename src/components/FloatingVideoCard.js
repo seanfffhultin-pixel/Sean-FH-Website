@@ -1,85 +1,44 @@
-
-
-import { useEffect, useState, useRef } from "react";
-
-const videos = [
-  {
-    title: "I TRIED RYANAIR WITH NO EXTRAS! (I HATED IT!)",
-    url: "https://www.youtube.com/embed/nt69ebmsfrI"
-  },
-  {
-    title: "BRITISH AIRWAYS SAVED ME FROM A SNOWSTORM! 🤯",
-    url: "https://www.youtube.com/embed/nC9IXGwQ6IY"
-  },
-  {
-    title: "THIS ETIHAD FLIGHT WAS DISGUSTING 🤢! (IT STANK!)",
-    url: "https://www.youtube.com/embed/6YFTWjdhpJ0"
-  },
-  {
-    title: "MY MOST PERFECT FLIGHT EVER! - FLYING THE ETIHAD 787-10!",
-    url: "https://www.youtube.com/embed/QyKWkWcN2DU"
-  },
-  {
-    title: "IS ETIHAD'S OLD 777 ACTUALLY GOOD?!",
-    url: "https://www.youtube.com/embed/P63RLWre9Fk"
-  },
-  {
-    title: "IS CATHAY PACIFIC THE WORLD'S BEST AIRLINE?",
-    url: "https://www.youtube.com/embed/XCsjAJMhWcc"
-  },
-  {
-    title: "The FOGGIEST Flight OF MY LIFE! (EasyJet From LONDON SOUTHEND AIRPORT!)",
-    url: "https://www.youtube.com/embed/0AvTiMiBXuA"
-  },
-  {
-    title: "Flying IndiGo | A VERY BASIC Airline",
-    url: "https://www.youtube.com/embed/FYugMR7V92U"
-  },
-  {
-    title: "Is Bangkok Airways THE BEST REGIONAL AIRLINE? (Flying Phuket - Bangkok)",
-    url: "https://www.youtube.com/embed/OW6BUq3LEG0"
-  },
-  {
-    title: "LONG-HAUL On Asia's UNDERDOG! (Does It Live Up To The Rest?)",
-    url: "https://www.youtube.com/embed/Aa03AJwh9f8"
-  },
-  {
-    title: "Plane Spotting at Phuket's BEACH Airport!",
-    url: "https://www.youtube.com/embed/9e5lkqjr8a0"
-  },
-  {
-    title: "The Reality of THAI AIRWAYS DOMESTIC...",
-    url: "https://www.youtube.com/embed/n_o-uCUZOBQ"
-  },
-  {
-    title: "Is FlySafair Just Another RYANAIR? (From LANSERIA!)",
-    url: "https://www.youtube.com/embed/bY2J-BaVT4w"
-  }
-];
+import { useEffect, useRef, useState } from "react";
+import { fallbackVideos, getLatestVideos } from "../data/youtube";
 
 export default function FloatingVideo() {
+  const [videos, setVideos] = useState(fallbackVideos.slice(0, 7));
   const [index, setIndex] = useState(0);
   const [isWatching, setIsWatching] = useState(false);
-  const [isClosed, setIsClosed] = useState(false); // ← no localStorage
-
+  const [isClosed, setIsClosed] = useState(false);
   const intervalRef = useRef(null);
 
   useEffect(() => {
-    if (isWatching || isClosed) return;
+    let active = true;
+    const updateVideos = (forceRefresh = false) => getLatestVideos(forceRefresh).then((latest) => {
+      if (active && latest.length) setVideos(latest.slice(0, 7));
+    });
+    updateVideos();
+    const refreshTimer = window.setInterval(() => updateVideos(true), 15 * 60 * 1000);
+    return () => {
+      active = false;
+      window.clearInterval(refreshTimer);
+    };
+  }, []);
 
-    intervalRef.current = setInterval(() => {
-      setIndex((prev) => (prev + 1) % videos.length);
+  useEffect(() => {
+    if (isWatching || isClosed || videos.length < 2) return undefined;
+
+    intervalRef.current = window.setInterval(() => {
+      setIndex((previous) => (previous + 1) % videos.length);
     }, 8000);
 
-    return () => clearInterval(intervalRef.current);
-  }, [isWatching, isClosed]);
+    return () => window.clearInterval(intervalRef.current);
+  }, [isWatching, isClosed, videos.length]);
 
   const closeVideo = () => {
-    setIsClosed(true); // ← only closes for this session
-    clearInterval(intervalRef.current);
+    setIsClosed(true);
+    window.clearInterval(intervalRef.current);
   };
 
-  if (isClosed) return null;
+  if (isClosed || videos.length === 0) return null;
+
+  const video = videos[index % videos.length];
 
   return (
     <div
@@ -91,11 +50,11 @@ export default function FloatingVideo() {
     >
       <button className="close-btn" onClick={closeVideo} aria-label="Close video"></button>
 
-      <p>{videos[index].title}</p>
+      <p>{video.title}</p>
 
       <iframe
-        src={`${videos[index].url}?rel=0`}
-        title={videos[index].title}
+        src={`https://www.youtube.com/embed/${video.id}?rel=0`}
+        title={video.title}
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       />

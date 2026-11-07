@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import reviews from "../data/reviews";
+import { getVideoDetailsByIds } from "../data/youtube";
 
 export default function Review() {
   const { reviewId } = useParams();
   const review = reviews.find((item) => item.slug === reviewId);
+  const reviewVideoId = review?.videoID;
   const [videoOpen, setVideoOpen] = useState(false);
+  const [videoDetails, setVideoDetails] = useState(null);
+
+  useEffect(() => {
+    let active = true;
+    setVideoDetails(null);
+    if (!reviewVideoId) return () => { active = false; };
+
+    const updateDetails = () => getVideoDetailsByIds([reviewVideoId]).then((details) => {
+      if (active) setVideoDetails(details[reviewVideoId] || null);
+    });
+    updateDetails();
+    const timer = window.setInterval(updateDetails, 15 * 60 * 1000);
+    return () => {
+      active = false;
+      window.clearInterval(timer);
+    };
+  }, [reviewVideoId]);
 
   if (!review) {
     return (
@@ -74,13 +93,20 @@ export default function Review() {
 
       <div className="review-page-footer">
         {review.videoID && (
-          <button
-            onClick={() => setVideoOpen(true)}
-            className="btn review-video-btn"
-            title="Watch video"
-          >
-            ▶ Watch Video
-          </button>
+          <div className="review-video-action">
+            <button
+              onClick={() => setVideoOpen(true)}
+              className="btn review-video-btn"
+              title="Watch video"
+            >
+              ▶ Watch Video
+            </button>
+            <small className="review-video-views">
+              {Number.isFinite(videoDetails?.viewCount)
+                ? `${new Intl.NumberFormat().format(videoDetails.viewCount)} views`
+                : "Views unavailable"}
+            </small>
+          </div>
         )}
         <Link className="review-back-link" to="/reviews">
           Back to all reviews
@@ -95,7 +121,7 @@ export default function Review() {
               width="100%"
               height="500px"
               src={`https://www.youtube.com/embed/${review.videoID}`}
-              title="Review video"
+              title={videoDetails?.title || review.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>

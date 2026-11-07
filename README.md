@@ -71,3 +71,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Sean-FH-Website
 # Sean-FH-Travels-Website
 # Sean-FH-Website
+
+## Automatic YouTube uploads
+
+The homepage reads the newest public uploads from the `@seanfhtravels` channel. The newest upload longer than three minutes appears as the featured video; the next six qualifying uploads fill the recent reviews list. The page refreshes the feed every 15 minutes and keeps the existing video list as a fallback. This duration rule excludes Shorts, including square or vertical Shorts up to three minutes, but also filters out shorter long-form videos.
+
+To enable live updates:
+
+1. In Google Cloud Console, create a project, enable **YouTube Data API v3**, and create an API key.
+2. Restrict the key to the YouTube Data API and to your website's HTTP referrers (include `localhost:3000/*` for development).
+3. Copy `.env.example` to `.env.local` and set `REACT_APP_YOUTUBE_API_KEY` to the key.
+4. Add the same variable to your hosting provider's build environment, then redeploy.
+
+The API key is included in the browser bundle, so use the HTTP referrer and API restrictions above. Do not commit `.env.local`.

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import reviews from "../data/reviews";
+import { getVideoDetailsByIds } from "../data/youtube";
 
 
 /* ---------------------- */
@@ -10,6 +11,20 @@ import reviews from "../data/reviews";
 export default function Reviews() {
   const [videoOpen, setVideoOpen] = useState(false);
   const [selectedVideoId, setSelectedVideoId] = useState(null);
+  const [videoDetails, setVideoDetails] = useState({});
+
+  useEffect(() => {
+    let active = true;
+    const updateDetails = () => getVideoDetailsByIds(reviews.map((review) => review.videoID)).then((details) => {
+      if (active) setVideoDetails(details);
+    });
+    updateDetails();
+    const timer = window.setInterval(updateDetails, 15 * 60 * 1000);
+    return () => {
+      active = false;
+      window.clearInterval(timer);
+    };
+  }, []);
 
   const handleVideoClick = (videoId) => {
     setSelectedVideoId(videoId);
@@ -63,13 +78,20 @@ export default function Reviews() {
 
                 <div className="review-buttons-group">
                   {review.videoID && (
-                    <button
-                      onClick={() => handleVideoClick(review.videoID)}
-                      className="btn review-video-btn"
-                      title="Watch video"
-                    >
-                      ▶ Watch Video
-                    </button>
+                    <div className="review-video-action">
+                      <button
+                        onClick={() => handleVideoClick(review.videoID)}
+                        className="btn review-video-btn"
+                        title="Watch video"
+                      >
+                        ▶ Watch Video
+                      </button>
+                      <small className="review-video-views">
+                        {Number.isFinite(videoDetails[review.videoID]?.viewCount)
+                          ? `${new Intl.NumberFormat().format(videoDetails[review.videoID].viewCount)} views`
+                          : "Views unavailable"}
+                      </small>
+                    </div>
                   )}
                   {review.slug && (
                     <Link
@@ -144,7 +166,7 @@ export default function Reviews() {
               width="100%"
               height="500px"
               src={`https://www.youtube.com/embed/${selectedVideoId}`}
-              title="Review video"
+              title={videoDetails[selectedVideoId]?.title || "Review video"}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
